@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/images/orgin-banner.jpg" alt="Orgin Bot Banner" width="100%">
+<img src="./assets/images/orgin-icon.jpg" alt="Orgin Bot Banner" width="100%">
 
 # 🟢 Orgin Bot — مستندات جامع
 
