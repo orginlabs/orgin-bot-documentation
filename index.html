@@ -12,12 +12,20 @@
 <link rel="canonical" href="https://orginlabs.github.io/orgin-bot-documentation/">
 <meta name="robots" content="index, follow">
 
+<!-- ===== Favicons ===== -->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
 <!-- ===== Open Graph (Facebook, LinkedIn, and most link-preview crawlers incl. many AI agents) ===== -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Orgin Bot — ربات هوشمند مدیریت گروه‌های تلگرام">
 <meta property="og:description" content="مدیریت، امنیت و هوش مصنوعی گروه‌های تلگرام در یک ربات. مستندات کامل، متن‌باز و رایگان.">
 <meta property="og:url" content="https://orginlabs.github.io/orgin-bot-documentation/">
-<meta property="og:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg">
+<meta property="og:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Orgin Bot">
 <meta property="og:locale" content="fa_IR">
 
@@ -25,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Orgin Bot — ربات هوشمند مدیریت گروه‌های تلگرام">
 <meta name="twitter:description" content="مدیریت، امنیت و هوش مصنوعی گروه‌های تلگرام در یک ربات.">
-<meta name="twitter:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg">
+<meta name="twitter:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/og-image.png">
 
 <!-- ===== Structured data for AI crawlers / search engines (schema.org) ===== -->
 <script type="application/ld+json">
@@ -37,7 +45,7 @@
   "operatingSystem": "Telegram",
   "url": "https://orginlabs.github.io/orgin-bot-documentation/",
   "description": "ربات مدیریت و امنیت گروه‌های تلگرام با دستیار هوش مصنوعی جمینی، قفل‌های پیشرفته، ضد اسپم و سلسله‌مراتب نقش‌ها.",
-  "image": "https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg",
+  "image": "https://orginlabs.github.io/orgin-bot-documentation/assets/og-image.png",
   "inLanguage": ["fa", "en"],
   "offers": {
     "@type": "Offer",
@@ -218,10 +226,17 @@
     flex: 0 0 auto;
     width: 40px; height:40px;
     display:flex; align-items:center; justify-content:center;
-    font-size:19px;
     border-radius:10px;
     background: var(--bg-elevated);
     border: 1px solid var(--border);
+  }
+  .feature .icon svg{
+    width:19px; height:19px;
+    stroke: var(--accent-1);
+    fill:none;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
   }
   .feature .body h3{
     font-size:16px;
@@ -307,7 +322,7 @@
     <h1>مدیریت، امنیت و هوش مصنوعی گروه تلگرامت، در یک ربات</h1>
     <p>ده‌ها قفل قابل تنظیم، دستیار هوشمند فارسی‌زبان و پنل کامل مدیریت — رایگان و آماده نصب.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://t.me/orginsupport">افزودن به گروه</a>
+      <a class="btn btn-primary" href="https://t.me/orgintelrobot?startgroup=true">افزودن به گروه</a>
       <a class="btn btn-ghost" href="https://github.com/orginlabs/orgin-bot-documentation">مشاهده مستندات در گیت‌هاب</a>
     </div>
   </section>
@@ -317,35 +332,35 @@
     <p class="lede">هرچه یک گروه فعال برای اداره‌شدن نیاز دارد، در یک پنل.</p>
 
     <div class="feature">
-      <div class="icon">🔒</div>
+      <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
       <div class="body">
         <h3>بیش از ۳۰ نوع قفل</h3>
         <p>کنترل کامل محتوای متنی، رسانه‌ای، امنیتی و زبانی گروه.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="icon">🤖</div>
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg></div>
       <div class="body">
         <h3>دستیار هوش مصنوعی Orgin AI</h3>
         <p>پاسخ‌گویی هوشمند مبتنی بر Gemini Pro، جستجوی زندهٔ وب و مکالمهٔ صوتی.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="icon">🛡️</div>
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
       <div class="body">
         <h3>امنیت درجه‌یک</h3>
         <p>ضد تبچی، ضد اسپم، ضد فلود و محافظت در برابر خیانت ادمین‌ها.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="icon">👑</div>
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 18h16"/><path d="M5 18l-1.5-8L8 13l4-6 4 6 4.5-3L19 18H5z"/></svg></div>
       <div class="body">
         <h3>سلسله‌مراتب نقش‌ها</h3>
         <p>مالک، جانشین، مدیر، ناظر، عضو ویژه و لیست سفید — هرکدام با سطح دسترسی خودشان.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="icon">🎮</div>
+      <div class="icon"><svg viewBox="0 0 24 24" stroke-width="0" fill="var(--accent-1)"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="var(--accent-1)" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.1"/><circle cx="15.5" cy="8.5" r="1.1"/><circle cx="8.5" cy="15.5" r="1.1"/><circle cx="15.5" cy="15.5" r="1.1"/><circle cx="12" cy="12" r="1.1"/></svg></div>
       <div class="body">
         <h3>سرگرمی و بازی</h3>
         <p>چالش جرأت/حقیقت، فال حافظ، جوک، تاس و آمار فعالیت اعضا.</p>
