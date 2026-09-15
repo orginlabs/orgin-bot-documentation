@@ -2,49 +2,74 @@
 
 <img src="./assets/images/orgin-icon.jpg" alt="Orgin Bot Banner" width="100%">
 
-# 🟢 Orgin Bot — مستندات جامع
+# Orgin Bot — مستندات جامع
 
 ### سامانه پیشرفته و نسل‌جدید مدیریت، امنیت و هوش مصنوعی گروه‌های تلگرام
 
-[![Platform](https://img.shields.io/badge/Platform-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/orginsupport)
-[![Edition](https://img.shields.io/badge/Edition-Enterprise%20Production-brightgreen?style=for-the-badge)](#)
+[![Platform](https://img.shields.io/badge/Platform-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/orgintelrobot?startgroup=true)
+[![Website](https://img.shields.io/badge/Website-orginlabs.github.io-22A559?style=for-the-badge&logo=googlechrome&logoColor=white)](https://orginlabs.github.io/orgin-bot-documentation/)
+[![Edition](https://img.shields.io/badge/Edition-Enterprise%20Production-22A559?style=for-the-badge)](#)
 [![AI Engine](https://img.shields.io/badge/AI-Gemini%20Pro-blueviolet?style=for-the-badge)](#)
 [![Language](https://img.shields.io/badge/Language-FA%20%2F%20EN-orange?style=for-the-badge)](#)
-[![Docs](https://img.shields.io/badge/Docs-Complete-success?style=for-the-badge)](#-فهرست-مستندات)
 
 **زبان مستندات:** فارسی 🇮🇷 · **پشتیبانی ربات:** فارسی / انگلیسی
 
+<sub><img src="./assets/icons/globe.svg" width="14" valign="middle"> </sub>[وب‌سایت رسمی](https://orginlabs.github.io/orgin-bot-documentation/) ·
+[➕ افزودن ربات به گروه](https://t.me/orgintelrobot?startgroup=true) ·
 [💬 پشتیبانی](https://t.me/orginsupport) ·
 [👨‍💻 سازنده](https://t.me/NewMovieSupportHQ) ·
-[🎮 ربات بازی همکار](https://t.me/Orgingamerobot) ·
 [🚀 شروع نصب](./docs/00-getting-started.md)
 
 </div>
 
----
+<br>
 
-> ⚠️ **توجه مهم:** این Repository صرفاً یک **مرجع مستندسازی (Documentation Repository)** برای ربات تلگرامی **Orgin Bot** است.
+> [!IMPORTANT]
+> این Repository صرفاً یک **مرجع مستندسازی (Documentation Repository)** برای ربات تلگرامی **Orgin Bot** است.
 > سورس‌کد ربات در این مخزن قرار **ندارد** و قرار نیست اضافه شود؛ هدف این پروژه، ارائهٔ یک راهنمای کامل، دقیق و منظم از تمام قابلیت‌ها، دستورات و پنل‌های ربات — دقیقاً بر پایهٔ اسناد رسمی — است.
 
----
+<br>
 
-## 📖 دربارهٔ Orgin Bot
+## دربارهٔ Orgin Bot
 
 **Orgin Bot** یک ربات مدیریت گروه تلگرامی نسل‌جدید (Enterprise Production Edition) است که مدیریت، امنیت، نظم‌دهی و سرگرمی گروه‌های سوپرگروه تلگرام را با بهره‌گیری از **هوش مصنوعی Gemini Pro** یکپارچه می‌کند. این ربات دارای پنل شیشه‌ای کامل، ده‌ها قفل و محدودیت قابل تنظیم، سیستم مدیریت نقش‌ها، ابزارهای پاکسازی، دستیار هوشمند فارسی‌زبان (Orgin AI) و امکانات پریمیوم اختصاصی است.
 
-| ویژگی کلیدی | توضیح کوتاه |
-|---|---|
-| 🔒 بیش از ۳۰ نوع قفل | کنترل کامل محتوای متنی، رسانه‌ای، امنیتی و زبانی گروه |
-| ⚙️ پنل تنظیمات پیشرفته | ۱۷ بخش تخصصی قابل مدیریت با دکمه‌های شیشه‌ای |
-| 🤖 دستیار هوش مصنوعی Orgin AI | فرمان‌های عامیانه، جستجوی زندهٔ وب، ویس‌به‌ویس |
-| 🛡️ امنیت درجه‌یک | ضد تبچی، ضد اسپم، ضد فلود، ضد خیانت ادمین‌ها |
-| 👑 سلسله‌مراتب نقش‌ها | مالک، جانشین، مدیر، ناظر، ویژه (VIP)، لیست سفید |
-| 🎮 سرگرمی و بازی | چالش جرأت/حقیقت، فال حافظ، دانستنی، جوک، تاس، سکه |
-| 💎 اشتراک پریمیوم | امکانات نامحدود، درگاه استارز تلگرام و کریپتو TON |
+<br>
 
----
+<table>
+<tr>
+<td width="46" align="center"><img src="./assets/icons/lock.svg" width="22"></td>
+<td><strong>بیش از ۳۰ نوع قفل</strong><br><sub>کنترل کامل محتوای متنی، رسانه‌ای، امنیتی و زبانی گروه</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/gear.svg" width="22"></td>
+<td><strong>پنل تنظیمات پیشرفته</strong><br><sub>۱۷ بخش تخصصی قابل مدیریت با دکمه‌های شیشه‌ای</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/sparkle.svg" width="22"></td>
+<td><strong>دستیار هوش مصنوعی Orgin AI</strong><br><sub>فرمان‌های عامیانه، جستجوی زندهٔ وب، ویس‌به‌ویس</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/shield.svg" width="22"></td>
+<td><strong>امنیت درجه‌یک</strong><br><sub>ضد تبچی، ضد اسپم، ضد فلود، ضد خیانت ادمین‌ها</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/crown.svg" width="22"></td>
+<td><strong>سلسله‌مراتب نقش‌ها</strong><br><sub>مالک، جانشین، مدیر، ناظر، ویژه (VIP)، لیست سفید</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/dice.svg" width="22"></td>
+<td><strong>سرگرمی و بازی</strong><br><sub>چالش جرأت/حقیقت، فال حافظ، دانستنی، جوک، تاس، سکه</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="./assets/icons/diamond.svg" width="22"></td>
+<td><strong>اشتراک پریمیوم</strong><br><sub>امکانات نامحدود، درگاه استارز تلگرام و کریپتو TON</sub></td>
+</tr>
+</table>
 
-## 📑 فهرست مستندات
+<br>
+
+## فهرست مستندات
 
 جهت سهولت دسترسی، مستندات به‌صورت موضوعی در پوشهٔ [`docs/`](./docs) دسته‌بندی شده‌اند:
 
@@ -69,12 +94,12 @@
 | — | [🗒️ تاریخچهٔ تغییرات (Changelog)](./CHANGELOG.md) | آخرین قابلیت‌های اضافه‌شده به ربات |
 | — | [🤝 راهنمای مشارکت](./CONTRIBUTING.md) | نحوهٔ پیشنهاد اصلاح مستندات |
 
----
+<br>
 
-## ⚡ شروع سریع
+## شروع سریع
 
 ```text
-۱) ربات را با دکمهٔ «➕ افزودن به گروه» یا لینک t.me/YourBot?startgroup=true وارد گروه کنید
+۱) ربات را با دکمهٔ «➕ افزودن به گروه» یا لینک t.me/orgintelrobot?startgroup=true وارد گروه کنید
 ۲) دسترسی‌های Delete Messages ،Ban Users ،Pin Messages و Invite Users را به ربات بدهید
 ۳) در گروه دستور  نصب  (یا /start) را ارسال کنید
 ۴) با ارسال دستور  پنل  یا /panel به کنترل‌پنل گرافیکی دسترسی پیدا کنید
@@ -82,17 +107,18 @@
 
 📄 راهنمای کامل گام‌به‌گام: [**۰۰ - شروع سریع و نصب**](./docs/00-getting-started.md)
 
----
+<br>
 
-## 🗂️ ساختار پروژه
+## ساختار پروژه
 
 ```text
-orgin-bot-/
+orgin-bot-documentation/
 ├── README.md                      ← همین فایل (نمای کلی پروژه)
 ├── FAQ.md                         ← سوالات متداول و عیب‌یابی
 ├── CHANGELOG.md                   ← تاریخچهٔ به‌روزرسانی‌ها
 ├── CONTRIBUTING.md                ← راهنمای مشارکت در مستندات
 ├── LICENSE                        ← مجوز استفاده از مستندات
+├── index.html                     ← وب‌سایت معرفی (GitHub Pages)
 ├── docs/                          ← مستندات موضوعی و تفصیلی
 │   ├── 00-getting-started.md
 │   ├── 01-navigation-sitemap.md
@@ -111,14 +137,13 @@ orgin-bot-/
 │   └── 14-commands-reference.md
 └── assets/
     ├── images/                    ← لوگو، بنر و آیکون‌های رسمی
-    │   └── README.md
-    └── screenshots/                ← اسکرین‌شات‌های پنل‌ها و منوها (بعداً تکمیل می‌شود)
-        └── README.md
+    ├── icons/                     ← آیکون‌های SVG سبک خطی این README
+    └── screenshots/                ← اسکرین‌شات‌های پنل‌ها و منوها
 ```
 
----
+<br>
 
-## 👑 سلسله‌مراتب دسترسی (خلاصه)
+## سلسله‌مراتب دسترسی (خلاصه)
 
 | ردیف | نقش | سطح دسترسی |
 |:---:|---|---|
@@ -131,18 +156,18 @@ orgin-bot-/
 
 جزئیات کامل → [۰۷ - نقش‌ها، مدیران و لیست سفید](./docs/07-roles-permissions.md)
 
----
+<br>
 
-## 💎 پریمیوم Orgin Bot
+## پریمیوم Orgin Bot
 
 <table>
-<tr><td>
+<tr><td valign="top">
 
 ✅ ناظر هوشمند ضد کلاهبرداری با هوش مصنوعی
 ✅ پاسخ‌گوی هوشمند سوالات تخصصی گروه (AI FAQ)
 ✅ سیستم تیکتینگ داخلی گروه
 
-</td><td>
+</td><td valign="top">
 
 ✅ سرورهای اولویت‌دار VIP (پاسخ زیر ۵۰ms)
 ✅ ضد تبچی و ضد رید سطح Enterprise
@@ -154,17 +179,19 @@ orgin-bot-/
 
 جزئیات و روش‌های خرید → [۱۲ - اشتراک پریمیوم و پشتیبانی](./docs/12-premium.md)
 
----
+<br>
 
-## 📞 ارتباط با ما
+## ارتباط با ما
 
 | کانال ارتباطی | لینک |
 |---|---|
+| 🌐 وب‌سایت رسمی | [orginlabs.github.io/orgin-bot-documentation](https://orginlabs.github.io/orgin-bot-documentation/) |
+| ➕ افزودن ربات به گروه | [t.me/orgintelrobot](https://t.me/orgintelrobot?startgroup=true) |
 | 🎧 پشتیبانی مستقیم و سازندهٔ ربات | [@NewMovieSupportHQ](https://t.me/NewMovieSupportHQ) |
 | 📢 گروه رسمی پشتیبانی کاربران | [@orginsupport](https://t.me/orginsupport) |
 | 🎮 ربات رسمی بازی‌های تلگرام (همکار) | [@orgingamerobot](https://t.me/Orgingamerobot) |
 
----
+<br>
 
 <div align="center">
 
