@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== Primary SEO ===== -->
+<title>Orgin Bot — ربات هوشمند مدیریت گروه‌های تلگرام</title>
+<meta name="description" content="Orgin Bot: ربات مدیریت و امنیت گروه‌های تلگرام با دستیار هوش مصنوعی جمینی. قفل‌های پیشرفته، ضد اسپم، سلسله‌مراتب نقش‌ها و دستیار هوشمند فارسی‌زبان.">
+<meta name="keywords" content="Orgin Bot, ربات تلگرام, ربات مدیریت گروه, هوش مصنوعی تلگرام, Telegram AI bot, Telegram group management bot, Persian telegram bot, Gemini bot">
+<meta name="author" content="Orgin Bot Team">
+<link rel="canonical" href="https://orginlabs.github.io/orgin-bot-documentation/">
+<meta name="robots" content="index, follow">
+
+<!-- ===== Open Graph (Facebook, LinkedIn, and most link-preview crawlers incl. many AI agents) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orgin Bot — ربات هوشمند مدیریت گروه‌های تلگرام">
+<meta property="og:description" content="مدیریت، امنیت و هوش مصنوعی گروه‌های تلگرام در یک ربات. مستندات کامل، متن‌باز و رایگان.">
+<meta property="og:url" content="https://orginlabs.github.io/orgin-bot-documentation/">
+<meta property="og:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg">
+<meta property="og:site_name" content="Orgin Bot">
+<meta property="og:locale" content="fa_IR">
+
+<!-- ===== Twitter / X card ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Orgin Bot — ربات هوشمند مدیریت گروه‌های تلگرام">
+<meta name="twitter:description" content="مدیریت، امنیت و هوش مصنوعی گروه‌های تلگرام در یک ربات.">
+<meta name="twitter:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg">
+
+<!-- ===== Structured data for AI crawlers / search engines (schema.org) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Orgin Bot",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Telegram",
+  "url": "https://orginlabs.github.io/orgin-bot-documentation/",
+  "description": "ربات مدیریت و امنیت گروه‌های تلگرام با دستیار هوش مصنوعی جمینی، قفل‌های پیشرفته، ضد اسپم و سلسله‌مراتب نقش‌ها.",
+  "image": "https://orginlabs.github.io/orgin-bot-documentation/assets/orgin-logo.jpg",
+  "inLanguage": ["fa", "en"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "sameAs": [
+    "https://github.com/orginlabs/orgin-bot-documentation",
+    "https://t.me/orginsupport",
+    "https://t.me/NewMovieSupportHQ",
+    "https://t.me/Orgingamerobot"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0a0c0a;
+    --bg-elevated: #12150f;
+    --border: #232821;
+    --text: #eaf2e4;
+    --text-muted: #92a08a;
+    --accent-1: #7ed957;
+    --accent-2: #cdf97e;
+    --accent-glow: rgba(126, 217, 87, 0.28);
+    --max-w: 880px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 78% 8%, rgba(126,217,87,0.10), transparent 40%),
+      radial-gradient(circle at 10% 90%, rgba(126,217,87,0.06), transparent 45%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  .wrap{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- nav ---------- */
+  nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 28px 0;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:17px;
+  }
+  .brand img{ width:30px; height:30px; border-radius:8px; }
+  .navlinks{ display:flex; gap:28px; font-size:14.5px; color: var(--text-muted); }
+  .navlinks a:hover{ color: var(--text); }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding: 64px 0 72px;
+    text-align:center;
+  }
+  .logo-wrap{
+    position:relative;
+    width:120px; height:120px;
+    margin: 0 auto 36px;
+    animation: rise 900ms ease-out both;
+  }
+  .logo-wrap::before{
+    content:"";
+    position:absolute;
+    inset:-30px;
+    background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+    filter: blur(6px);
+    animation: pulse 3.4s ease-in-out infinite;
+  }
+  .logo-wrap img{
+    position:relative;
+    width:100%; height:100%;
+    border-radius:26px;
+    display:block;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity:.65; transform: scale(1); }
+    50%{ opacity:1; transform: scale(1.06); }
+  }
+  @keyframes rise{
+    from{ opacity:0; transform: translateY(14px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+
+  h1{
+    font-size: clamp(30px, 4.6vw, 44px);
+    font-weight:800;
+    line-height:1.4;
+    letter-spacing:-0.01em;
+    max-width: 620px;
+    margin: 0 auto 18px;
+  }
+  .hero p{
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 480px;
+    margin: 0 auto 36px;
+  }
+
+  .cta-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn{
+    padding: 13px 26px;
+    border-radius: 12px;
+    font-weight:600;
+    font-size:15px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    color:#0a0c0a;
+  }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px var(--accent-glow); }
+  .btn-ghost{
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .btn-ghost:hover{ border-color: var(--accent-1); }
+
+  /* ---------- section heading ---------- */
+  .section{ padding: 56px 0; border-top: 1px solid var(--border); }
+  .section h2{
+    font-size: 24px;
+    font-weight:700;
+    margin-bottom: 10px;
+  }
+  .section > .lede{
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 34px;
+    max-width: 520px;
+  }
+
+  /* ---------- features ---------- */
+  .feature{
+    display:flex;
+    gap:18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .feature:last-child{ border-bottom:none; }
+  .feature .icon{
+    flex: 0 0 auto;
+    width: 40px; height:40px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:19px;
+    border-radius:10px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+  }
+  .feature .body h3{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .feature .body p{
+    font-size:14.5px;
+    color: var(--text-muted);
+  }
+
+  /* ---------- quickstart ---------- */
+  .steps{ position:relative; padding-inline-start: 6px; }
+  .step{
+    display:flex;
+    gap:18px;
+    position:relative;
+    padding-bottom: 30px;
+  }
+  .step:last-child{ padding-bottom:0; }
+  .step .num{
+    flex:0 0 auto;
+    width:30px; height:30px;
+    border-radius:50%;
+    background: var(--bg-elevated);
+    border:1px solid var(--accent-1);
+    color: var(--accent-1);
+    font-weight:700;
+    font-size:13px;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    z-index:1;
+  }
+  .step:not(:last-child)::before{
+    content:"";
+    position:absolute;
+    top:30px; bottom:-2px;
+    right:14.5px;
+    width:1px;
+    background: var(--border);
+  }
+  .step p{ font-size:14.5px; color: var(--text-muted); padding-top:5px; }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top: 1px solid var(--border);
+    padding: 34px 0 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:13.5px;
+    color: var(--text-muted);
+  }
+  footer .links{ display:flex; gap:20px; }
+  footer a:hover{ color: var(--accent-1); }
+
+  @media (max-width:520px){
+    nav .navlinks{ display:none; }
+    footer{ flex-direction:column; text-align:center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="brand">
+      <img src="assets/orgin-logo.jpg" alt="Orgin Bot">
+      <span>Orgin Bot</span>
+    </div>
+    <div class="navlinks">
+      <a href="https://github.com/orginlabs/orgin-bot-documentation">مستندات</a>
+      <a href="https://t.me/orginsupport">پشتیبانی</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="logo-wrap">
+      <img src="assets/orgin-logo.jpg" alt="Orgin Bot logo">
+    </div>
+    <h1>مدیریت، امنیت و هوش مصنوعی گروه تلگرامت، در یک ربات</h1>
+    <p>ده‌ها قفل قابل تنظیم، دستیار هوشمند فارسی‌زبان و پنل کامل مدیریت — رایگان و آماده نصب.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://t.me/orginsupport">افزودن به گروه</a>
+      <a class="btn btn-ghost" href="https://github.com/orginlabs/orgin-bot-documentation">مشاهده مستندات در گیت‌هاب</a>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <h2>امکانات ربات</h2>
+    <p class="lede">هرچه یک گروه فعال برای اداره‌شدن نیاز دارد، در یک پنل.</p>
+
+    <div class="feature">
+      <div class="icon">🔒</div>
+      <div class="body">
+        <h3>بیش از ۳۰ نوع قفل</h3>
+        <p>کنترل کامل محتوای متنی، رسانه‌ای، امنیتی و زبانی گروه.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="icon">🤖</div>
+      <div class="body">
+        <h3>دستیار هوش مصنوعی Orgin AI</h3>
+        <p>پاسخ‌گویی هوشمند مبتنی بر Gemini Pro، جستجوی زندهٔ وب و مکالمهٔ صوتی.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="icon">🛡️</div>
+      <div class="body">
+        <h3>امنیت درجه‌یک</h3>
+        <p>ضد تبچی، ضد اسپم، ضد فلود و محافظت در برابر خیانت ادمین‌ها.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="icon">👑</div>
+      <div class="body">
+        <h3>سلسله‌مراتب نقش‌ها</h3>
+        <p>مالک، جانشین، مدیر، ناظر، عضو ویژه و لیست سفید — هرکدام با سطح دسترسی خودشان.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="icon">🎮</div>
+      <div class="body">
+        <h3>سرگرمی و بازی</h3>
+        <p>چالش جرأت/حقیقت، فال حافظ، جوک، تاس و آمار فعالیت اعضا.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="start">
+    <h2>شروع سریع</h2>
+    <p class="lede">در چهار قدم، ربات آماده کار در گروه شماست.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">۱</div>
+        <p>ربات را با دکمهٔ «افزودن به گروه» وارد سوپرگروه خود کنید.</p>
+      </div>
+      <div class="step">
+        <div class="num">۲</div>
+        <p>دسترسی‌های حذف پیام، محدودیت کاربران، سنجاق پیام و دعوت را به ربات بدهید.</p>
+      </div>
+      <div class="step">
+        <div class="num">۳</div>
+        <p>دستور <code>/start</code> یا «نصب» را در گروه ارسال کنید.</p>
+      </div>
+      <div class="step">
+        <div class="num">۴</div>
+        <p>با دستور <code>/panel</code> یا «پنل» وارد کنترل‌پنل گرافیکی شوید.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© ۱۴۰۴ Orgin Bot — این صفحه صرفاً معرفی است؛ مستندات کامل در گیت‌هاب.</span>
+    <div class="links">
+      <a href="https://github.com/orginlabs/orgin-bot-documentation">گیت‌هاب</a>
+      <a href="https://t.me/orginsupport">پشتیبانی</a>
+      <a href="https://t.me/Orgingamerobot">ربات بازی</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

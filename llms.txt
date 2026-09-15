@@ -1,0 +1,20 @@
+# Orgin Bot
+
+> ربات مدیریت و امنیت گروه‌های تلگرام با دستیار هوش مصنوعی (Gemini Pro). شامل قفل‌های پیشرفته، ضد اسپم، سلسله‌مراتب نقش‌ها، دستیار هوشمند فارسی‌زبان و پنل مدیریت کامل.
+
+Orgin Bot is a Telegram supergroup management bot with an integrated AI assistant (Gemini Pro). It provides 30+ configurable locks, anti-spam/anti-flood protection, role hierarchy, a Persian-language AI assistant, and a full inline control panel. It is free to add to any Telegram group.
+
+## Links
+
+- Website: https://orginlabs.github.io/orgin-bot-documentation/
+- Documentation repository: https://github.com/orginlabs/orgin-bot-documentation
+- Getting started guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/00-getting-started.md
+- Full command reference: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/14-commands-reference.md
+- AI assistant docs: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/10-orgin-ai.md
+- Support channel (Telegram): https://t.me/orginsupport
+- Developer contact (Telegram): https://t.me/NewMovieSupportHQ
+
+## Notes
+
+- This repository contains documentation only; it does not contain the bot's source code.
+- Language of documentation: Persian (Farsi), with some English/Russian/Arabic support in the bot itself.
