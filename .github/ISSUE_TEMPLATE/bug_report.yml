@@ -1,0 +1,59 @@
+name: گزارش باگ
+description: گزارش خطا در مستندات، وب‌سایت یا ابزارهای همین مخزن
+title: "[باگ] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        برای باگ خود ربات، از کانال پشتیبانی استفاده کنید. این فرم برای مخزن مستندات است. اطلاعات خصوصی، شماره تلفن، شناسهٔ گروه و توکن را وارد نکنید.
+  - type: dropdown
+    id: area
+    attributes:
+      label: بخش درگیر
+      options:
+        - مستندات / دستورها
+        - وب‌سایت راهنما
+        - GitHub Actions یا تنظیمات مخزن
+        - مورد دیگر
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: فایل، صفحه یا پیوند
+      description: نشانی دقیق صفحه یا مسیر فایل را بنویسید.
+      placeholder: docs/14-commands-reference.md
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: شرح مشکل
+      description: چه چیزی اشتباه، ناقص یا گمراه‌کننده است؟
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: گام‌های بازتولید یا مشاهده
+      description: برای مستندات، متن/دستور و شرایط لازم را ذکر کنید؛ برای سایت، مرورگر و اندازهٔ صفحه را هم بنویسید.
+      placeholder: |
+        1. صفحه را باز کردم...
+        2. بخش ... را خواندم...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: انتظار شما / پیشنهاد اصلاح
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: پیش از ارسال
+      options:
+        - label: مخزن و صفحهٔ مربوط را بررسی کردم و این مورد تکراری نیست.
+          required: true
+        - label: هیچ دادهٔ شخصی، توکن یا اطلاعات محرمانه‌ای در گزارش نیست.
+          required: true

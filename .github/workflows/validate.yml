@@ -1,0 +1,29 @@
+name: اعتبارسنجی مستندات
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: بررسی پیوندها و ساختار
+    runs-on: ubuntu-latest
+    steps:
+      - name: دریافت مخزن
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: بررسی مستندات و وب‌سایت
+        run: python3 scripts/validate_docs.py
+      - name: بررسی نحو فایل‌های YAML
+        run: >-
+          ruby -e 'require "yaml"; ARGV.each { |path| YAML.load_file(path); puts "YAML OK: #{path}" }' .github/ISSUE_TEMPLATE/*.yml .github/workflows/*.yml .github/FUNDING.yml .github/release.yml
+      - name: بررسی فاصله‌گذاری تغییرات
+        if: github.event_name == 'pull_request'
+        run: git diff --check "${{ github.event.pull_request.base.sha }}...${{ github.sha }}"

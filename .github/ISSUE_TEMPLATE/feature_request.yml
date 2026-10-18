@@ -1,0 +1,48 @@
+name: پیشنهاد بهبود
+description: پیشنهاد برای بهترشدن مستندات، وب‌سایت یا ابزارهای این مخزن
+title: "[پیشنهاد] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        این فرم برای بهبود همین مخزن مستندات است. پیشنهاد قابلیت تازه برای خود ربات را با گروه پشتیبانی مطرح کنید.
+  - type: dropdown
+    id: area
+    attributes:
+      label: بخش پیشنهادی
+      options:
+        - مستندات و راهنمای دستورها
+        - وب‌سایت راهنما
+        - دسترس‌پذیری یا ظاهر
+        - ابزارهای مشارکت و خودکارسازی
+        - مورد دیگر
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: چه مسئله‌ای را حل می‌کند؟
+      description: وضعیت فعلی و کسانی را که تحت‌تأثیرند توضیح دهید.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: پیشنهاد شما
+      description: راه‌حل یا نمونهٔ مطلوب را شرح دهید.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: گزینه‌های جایگزین یا پیوند نمونه
+      render: markdown
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: پیش از ارسال
+      options:
+        - label: پیشنهاد را در Discussions و Issues جست‌وجو کردم.
+          required: true
+        - label: این درخواست شامل اطلاعات خصوصی یا آسیب‌پذیری افشانشدهٔ عمومی نیست.
+          required: true

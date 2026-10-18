@@ -1,0 +1,16 @@
+changelog:
+  categories:
+    - title: "مستندات و بهبودها"
+      labels:
+        - documentation
+        - enhancement
+    - title: "رفع اشکال"
+      labels:
+        - bug
+    - title: "امنیت و نگه‌داری"
+      labels:
+        - security
+        - maintenance
+    - title: "سایر تغییرات"
+      labels:
+        - "*"

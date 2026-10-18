@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: پرسش و پاسخ
+    url: https://github.com/orginlabs/orgin-bot-documentation/discussions/categories/q-a
+    about: برای پرسش و دریافت راهنمایی از دستهٔ Q&A استفاده کنید.
+  - name: ایده‌ها و گفت‌وگوهای عمومی
+    url: https://github.com/orginlabs/orgin-bot-documentation/discussions/categories/ideas
+    about: برای پیشنهاد و گفت‌وگوی عمومی از Discussions استفاده کنید.
+  - name: گروه پشتیبانی تلگرام
+    url: https://t.me/orginsupport
+    about: برای کمک دربارهٔ کار با ربات به گروه پشتیبانی بروید.
+  - name: گزارش آسیب‌پذیری امنیتی
+    url: https://github.com/orginlabs/orgin-bot-documentation/security/advisories/new
+    about: گزارش امنیتی را فقط به‌صورت خصوصی ارسال کنید؛ در Issue عمومی منتشر نکنید.

@@ -1,24 +1,34 @@
 # Orgin | ارجین
 
-> راهنمای فارسی ربات مدیریت گروه تلگرام ارجین. این فایل و README مخزن، اطلاعات جاری قابلیت‌ها و دستورها را خلاصه می‌کنند.
+> راهنمای فارسی ربات مدیریت گروه تلگرام ارجین. مرجع قابلیت‌ها و دستورها README مخزن است.
 
-Orgin is a Telegram group-management bot with member moderation, content locks, anti-spam tools, welcome/rules, group growth features, statistics, premium options, and an AI assistant. Feature availability may depend on Telegram permissions, role, plan, and service availability.
+Orgin is a Telegram group-management bot with member moderation, content locks, anti-spam tools, welcome and rules, group growth features, statistics, Premium options, and an AI assistant. Feature availability may depend on Telegram permissions, user role, plan, and service availability. This repository contains documentation and its website, not the bot's source code.
 
-## Source of truth
-
-- Canonical complete feature and command guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/README.md
-- Commands reference: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/14-commands-reference.md
-- FAQ: https://github.com/orginlabs/orgin-bot-documentation/blob/main/FAQ.md
-
-## Links
+## Official links
 
 - Bot: https://t.me/orginv1bot
 - Support group: https://t.me/orginsupport
 - Official channel: https://t.me/orginchanel
-- Website: https://orginlabs.github.io/orgin-bot-documentation/
-- Documentation repository: https://github.com/orginlabs/orgin-bot-documentation
+- Documentation website: https://orginlabs.github.io/orgin-bot-documentation/
+- Repository: https://github.com/orginlabs/orgin-bot-documentation
+
+## Documentation
+
+- Canonical complete feature and command guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/README.md
+- Full command reference: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/14-commands-reference.md
+- Getting started: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/00-getting-started.md
+- FAQ: https://github.com/orginlabs/orgin-bot-documentation/blob/main/FAQ.md
+- Changelog: https://github.com/orginlabs/orgin-bot-documentation/blob/main/CHANGELOG.md
+
+## Community and governance
+
+- GitHub Discussions: https://github.com/orginlabs/orgin-bot-documentation/discussions
+- Issues: https://github.com/orginlabs/orgin-bot-documentation/issues/new/choose
+- Contribution guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/CONTRIBUTING.md
+- Security policy and private vulnerability reporting: https://github.com/orginlabs/orgin-bot-documentation/blob/main/SECURITY.md
+- Releases: https://github.com/orginlabs/orgin-bot-documentation/releases
 
 ## Notes
 
-- This repository contains documentation, not the bot source code.
-- Do not infer commands or features beyond the canonical README; availability can vary by role, plan, Telegram permissions, and service status.
+- Do not infer commands or features beyond the canonical README.
+- Availability can vary by role, plan, Telegram permissions, and service status; the in-bot `/help` guide is the current operational reference.
