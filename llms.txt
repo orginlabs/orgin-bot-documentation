@@ -1,20 +1,24 @@
-# Orgin Bot
+# Orgin | ارجین
 
-> ربات مدیریت و امنیت گروه‌های تلگرام با دستیار هوش مصنوعی (Gemini Pro). شامل قفل‌های پیشرفته، ضد اسپم، سلسله‌مراتب نقش‌ها، دستیار هوشمند فارسی‌زبان و پنل مدیریت کامل.
+> راهنمای فارسی ربات مدیریت گروه تلگرام ارجین. این فایل و README مخزن، اطلاعات جاری قابلیت‌ها و دستورها را خلاصه می‌کنند.
 
-Orgin Bot is a Telegram supergroup management bot with an integrated AI assistant (Gemini Pro). It provides 30+ configurable locks, anti-spam/anti-flood protection, role hierarchy, a Persian-language AI assistant, and a full inline control panel. It is free to add to any Telegram group.
+Orgin is a Telegram group-management bot with member moderation, content locks, anti-spam tools, welcome/rules, group growth features, statistics, premium options, and an AI assistant. Feature availability may depend on Telegram permissions, role, plan, and service availability.
+
+## Source of truth
+
+- Canonical complete feature and command guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/README.md
+- Commands reference: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/14-commands-reference.md
+- FAQ: https://github.com/orginlabs/orgin-bot-documentation/blob/main/FAQ.md
 
 ## Links
 
+- Bot: https://t.me/orginv1bot
+- Support group: https://t.me/orginsupport
+- Official channel: https://t.me/orginchanel
 - Website: https://orginlabs.github.io/orgin-bot-documentation/
 - Documentation repository: https://github.com/orginlabs/orgin-bot-documentation
-- Getting started guide: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/00-getting-started.md
-- Full command reference: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/14-commands-reference.md
-- AI assistant docs: https://github.com/orginlabs/orgin-bot-documentation/blob/main/docs/10-orgin-ai.md
-- Support channel (Telegram): https://t.me/orginsupport
-- Developer contact (Telegram): https://t.me/NewMovieSupportHQ
 
 ## Notes
 
-- This repository contains documentation only; it does not contain the bot's source code.
-- Language of documentation: Persian (Farsi), with some English/Russian/Arabic support in the bot itself.
+- This repository contains documentation, not the bot source code.
+- Do not infer commands or features beyond the canonical README; availability can vary by role, plan, Telegram permissions, and service status.
