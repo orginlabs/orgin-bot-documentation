@@ -186,6 +186,14 @@ footer{background:var(--soft);border-top:1.5px solid var(--ink);padding:60px 0 0
 .up:hover{background:var(--o);transform:translateY(-3px)}
 .toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:9px 22px;border-radius:12px;font-size:14px;z-index:99;transition:.3s;pointer-events:none}
 .toast.on{opacity:1;transform:translate(-50%,0)}
+.bg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.bc{display:flex;flex-direction:column;gap:14px;padding:26px;background:#fff;border:1.5px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+.bc:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.bc:hover .sb{transform:rotate(30deg)}
+.bc .hd{display:flex;align-items:center;gap:14px}
+.bc h3{font-size:19px;font-weight:800;line-height:1.6}
+.bc p{font-size:14.5px;color:var(--mut);flex:1}
+.bm{margin-top:28px}
 @media(max-width:980px){.hero,.fx,.ai .gr,.dk .gr{grid-template-columns:1fr;gap:44px}.hero{padding-top:40px}.fx .sh{position:static}.plans{grid-template-columns:1fr 1fr}.p.free{grid-column:1/-1}.sx{grid-template-columns:1fr 1fr}.sx li{border-top:1.5px solid var(--ink)}.sx li:nth-child(-n+2){border-top:0}.sx li:nth-child(odd){border-inline-start:0}.fb{grid-template-columns:1fr;text-align:center;justify-items:center}.lg2{justify-content:center}.fg{grid-template-columns:1fr 1fr}.fbr{grid-column:1/-1}}
 @media(max-width:640px){.links{display:none}.rows,.plans,.sx{grid-template-columns:1fr}.p.free{grid-column:auto}.sx li{border-inline-start:0!important;border-top:1.5px solid var(--ink)!important}.sx li:first-child{border-top:0!important}.row{flex-wrap:wrap;gap:2px 12px}.row .d{margin:0;width:100%}.wrap{padding:0 18px}.sec,.ai,.dk{padding:64px 0}.pc:nth-child(2){margin-inline-start:0}.facts{flex-wrap:wrap}.facts div{flex:1 1 40%}.fb{padding:32px 22px}.fg{grid-template-columns:1fr;gap:28px}.fbt{flex-direction:column;align-items:flex-start}.tg{font-size:12.5px;padding:5px 12px 5px 9px}h1 em{white-space:normal}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
@@ -323,7 +331,7 @@ footer{background:var(--soft);border-top:1.5px solid var(--ink);padding:60px 0 0
 <li><span class="n">۴</span><p>بعدش دوستت باید ارجین رو به یه گروه اضافه کنه. تا این کار انجام نشه، پاداش ثبت نمی‌شه و فقط Start زدن کافی نیست.</p></li>
 </ol>
 </div>
-<div class="num rv">۲ روز<small>Premium به‌ازای هر دعوت کامل</small></div>
+<div class="num rv">۳ روز<small>Premium به‌ازای هر دعوت کامل</small></div>
 </div>
 </section>
 
@@ -337,6 +345,27 @@ footer{background:var(--soft);border-top:1.5px solid var(--ink);padding:60px 0 0
 <li><span class="n">۴</span><p>توی پیوی ربات وارد <b>«گروه‌های من»</b> شو و گروهت رو انتخاب کن تا پنل باز بشه.</p></li>
 <li><span class="n">۵</span><p>برای دیدن دستورها <code>/help</code> رو بفرست، یا توی گروه کلمه <b>راهنما</b> رو بنویس.</p></li>
 </ol>
+</div>
+</section>
+
+<section class="sec" id="bots">
+<div class="wrap">
+<div class="sh rv"><h2>ربات‌های دیگه‌ی ارجین</h2><p>ارجین فقط مدیریت گروه نیست. چند ربات دیگه هم داریم که برای معرفی گروه، گفتگو و پیداکردن گروه‌های جدید ساخته شدن.</p></div>
+<div class="bg">
+<a class="bc rv" href="bots.html#linkdoni">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-link"/></svg></div><div><h3>ثبت گروه در لینکدونی</h3><code>@Linkdoniorgbot</code></div></div>
+<p>گروهت رو رایگان توی کانال لینکدونی ثبت کن و جلوی چشم اعضای فعال بذار.</p>
+</a>
+<a class="bc rv" href="bots.html#sheykh">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-chat"/></svg></div><div><h3>ارجین شیخ</h3><code>@orginsheykhbot</code></div></div>
+<p>عضو خونسرد و حاضرجواب گروه، با لحن قدیمی. بی‌سروصدا می‌مونه و لحن گروه رو یاد می‌گیره.</p>
+</a>
+<a class="bc rv" href="bots.html#shuffle">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-shuffle"/></svg></div><div><h3>ارجین شافل</h3><code>@OrginShufflebot</code></div></div>
+<p>گروه‌یاب رندوم: گروهت رو ثبت کن تا نشون داده بشه، یا توی اکسپلور بین گروه‌های ثبت‌شده بگرد.</p>
+</a>
+</div>
+<div class="bm rv"><a class="btn bo" href="bots.html"><svg class="ic"><use href="#i-bot"/></svg>دیدن همه ربات‌ها</a></div>
 </div>
 </section>
 
