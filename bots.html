@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff8008">
+<title>ربات‌های Orgin | ارجین — لینکدونی، ارجین شیخ و ارجین شافل</title>
+<meta name="description" content="ربات‌های دیگه‌ی ارجین: ثبت رایگان گروه در لینکدونی، ارجین شیخ (عضو خونسرد و حاضرجواب گروه) و ارجین شافل (گروه‌یاب رندوم تلگرام).">
+<meta name="keywords" content="Orgin, ارجین, لینکدونی, ارجین شیخ, ارجین شافل, ربات تلگرام, ثبت گروه تلگرام, گروه‌یاب">
+<meta name="author" content="Orgin Labs">
+<link rel="canonical" href="https://orginlabs.github.io/orgin-bot-documentation/bots.html">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z' fill='%23ff8008' stroke='%23ff8008' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M30.2 54.2L43.8 67.7 70.8 38.5' fill='none' stroke='%23fff' stroke-width='10.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ربات‌های Orgin | ارجین — لینکدونی، ارجین شیخ و ارجین شافل">
+<meta property="og:description" content="ثبت گروه در لینکدونی، یه عضو خونسرد و حاضرجواب برای گروه و گروه‌یاب رندوم تلگرام.">
+<meta property="og:url" content="https://orginlabs.github.io/orgin-bot-documentation/bots.html">
+<meta property="og:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/og-image.png">
+<meta property="og:site_name" content="Orgin">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"ربات‌های Orgin","url":"https://orginlabs.github.io/orgin-bot-documentation/bots.html","inLanguage":"fa"},{"@type":"SoftwareApplication","name":"ثبت گروه در لینکدونی","applicationCategory":"CommunicationApplication","operatingSystem":"Telegram","url":"https://t.me/Linkdoniorgbot","inLanguage":"fa"},{"@type":"SoftwareApplication","name":"ارجین شیخ","applicationCategory":"CommunicationApplication","operatingSystem":"Telegram","url":"https://t.me/orginsheykhbot","inLanguage":"fa"},{"@type":"SoftwareApplication","name":"ارجین شافل","applicationCategory":"CommunicationApplication","operatingSystem":"Telegram","url":"https://t.me/OrginShufflebot","inLanguage":"fa"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--o:#ff8008;--od:#b94f00;--ol:#fff1e3;--ob:#ffd2a6;--ink:#1d1712;--mut:#6b5f55;--line:#eaded2;--bg:#fffdfa;--soft:#fff8f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;letter-spacing:-.01em}
+.brand svg{width:38px;height:38px;transition:transform .6s cubic-bezier(.3,1.4,.5,1)}
+.brand:hover svg{transform:rotate(30deg)}
+.brand small{font-weight:500;font-size:13px;color:var(--mut);margin-inline-start:6px}
+.links{display:flex;gap:4px}
+.links a{padding:6px 15px;border-radius:99px;font-size:14.5px;font-weight:500;color:var(--mut);transition:.2s}
+.links a:hover{background:var(--ol);color:var(--od)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:14px;font-weight:700;font-size:15px;border:1.5px solid var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.bo{background:var(--o);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.bo:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.bo:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.bw{background:#fff;color:var(--ink)}
+.bw:hover{background:var(--ol)}
+.bs{padding:8px 20px;font-size:14px;border-radius:12px;box-shadow:3px 3px 0 var(--ink)}
+.bw.bs{box-shadow:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0 88px}
+.hero>*{min-width:0}
+.hl{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--od);margin-bottom:18px}
+.hl svg{width:20px;height:20px}
+h1{font-size:clamp(34px,5vw,58px);font-weight:900;line-height:1.35;letter-spacing:-.02em;margin-bottom:22px}
+h1 em{font-style:normal;position:relative;z-index:0}
+h1 em::after{content:"";position:absolute;inset:auto 0 .08em 0;height:.34em;background:var(--o);opacity:.35;z-index:-1;transform-origin:right;animation:ul 1s .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ul{from{transform:scaleX(0)}}
+.sub{font-size:18px;color:var(--mut);max-width:540px;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;margin-top:44px;border:1.5px solid var(--ink);border-radius:16px;background:#fff;max-width:520px;overflow:hidden}
+.facts div{flex:1;padding:12px 18px;border-inline-start:1.5px solid var(--ink)}
+.facts div:first-child{border-inline-start:0}
+.facts b{display:block;font-size:22px;font-weight:900;line-height:1.5}
+.facts span{font-size:12.5px;color:var(--mut)}
+.art{position:relative;aspect-ratio:1;width:100%;max-width:470px;margin-inline:auto}
+.art .big{position:absolute;inset:8%;width:84%;height:84%;filter:drop-shadow(8px 10px 0 var(--ink));transition:transform .2s ease-out}
+.art .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(-360deg)}}
+.tg{position:absolute;display:flex;align-items:center;gap:8px;padding:7px 16px 7px 12px;background:#fff;border:1.5px solid var(--ink);border-radius:99px;font-size:13.5px;font-weight:700;box-shadow:3px 3px 0 var(--ink);animation:bob 5s ease-in-out infinite}
+.tg svg{width:18px;height:18px;color:var(--od)}
+.t1{top:6%;right:2%}.t2{top:32%;left:0;animation-delay:-1.4s}.t3{bottom:24%;right:0;animation-delay:-2.6s}.t4{bottom:4%;left:6%;animation-delay:-3.6s}
+@keyframes bob{50%{transform:translateY(-9px)}}
+.in{animation:up .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.sec{padding:92px 0;border-top:1.5px solid var(--ink)}
+.sh{margin-bottom:48px;max-width:640px}
+.sh h2{font-size:clamp(28px,3.8vw,44px);font-weight:900;line-height:1.45;letter-spacing:-.01em;margin-bottom:12px}
+.sh p{color:var(--mut);font-size:16.5px}
+.sh.sm{margin-bottom:28px}
+.sh.sm h2{font-size:clamp(24px,3vw,32px);margin-bottom:0}
+.sh .cta{margin-top:28px}
+.bg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.bc{display:flex;flex-direction:column;gap:14px;padding:26px;background:#fff;border:1.5px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+.bc:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+.bc .hd{display:flex;align-items:center;gap:14px}
+.bc h3{font-size:19px;font-weight:800;line-height:1.6}
+.bc p{font-size:14.5px;color:var(--mut);flex:1}
+.bc .ac{display:flex;gap:10px;flex-wrap:wrap}
+.fx{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.fx .sh{position:sticky;top:110px;margin:0}
+.fl{border-bottom:1px solid var(--line)}
+.f{display:grid;grid-template-columns:62px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--line)}
+.f:first-child{border-top:0;padding-top:0}
+.ib{position:relative;width:58px;height:58px;display:grid;place-items:center;flex:none}
+.ib .sb{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.f:hover .sb,.bc:hover .sb{transform:rotate(30deg)}
+.ib .ic{position:relative;color:var(--od)}
+.f h3{font-size:19px;font-weight:800;line-height:1.6;margin-bottom:4px}
+.f p{font-size:15px;color:var(--mut);margin-bottom:12px}
+.f p:last-child{margin-bottom:0}
+.cs{display:flex;flex-wrap:wrap;gap:7px}
+.cs i{font-style:normal;font-size:12.5px;font-weight:500;padding:1px 12px;border-radius:99px;background:var(--ol);border:1px solid var(--ob);color:#7a3a00}
+code{direction:ltr;unicode-bidi:isolate;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;padding:1px 8px;border-radius:7px;background:var(--ol);border:1px solid var(--ob);color:#7a3a00}
+.sx-wrap{margin-top:84px}
+.sx{display:grid;grid-template-columns:repeat(5,1fr);gap:0;list-style:none;border:1.5px solid var(--ink);border-radius:22px;background:#fff;overflow:hidden}
+.sx li{padding:26px 22px;border-inline-start:1.5px solid var(--ink);position:relative;transition:background .25s}
+.sx li:first-child{border-inline-start:0}
+.sx li:hover{background:var(--ol)}
+.sx .n{display:block;font-size:46px;font-weight:900;line-height:1.2;color:var(--o);-webkit-text-stroke:1.5px var(--ink);margin-bottom:8px}
+.sx p{font-size:14.5px}
+.sx b{font-weight:800}
+.ai{background:var(--o);border-block:1.5px solid var(--ink);padding:92px 0}
+.ai .gr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ai .gr>*{min-width:0}
+.ai h2{font-size:clamp(30px,4vw,48px);font-weight:900;line-height:1.4;margin-bottom:14px}
+.ai .lead{font-size:17.5px;max-width:480px;margin-bottom:22px}
+.ai .cs{margin-bottom:28px;max-width:480px}
+.ai .cs i{background:#fff;border-color:var(--ink);color:var(--ink);font-weight:600}
+.ai .btn{background:var(--ink);color:#fff;box-shadow:4px 4px 0 #fff}
+.ai .btn:hover{box-shadow:6px 6px 0 #fff}
+.pair{display:grid;gap:16px}
+.pc{background:#fff;border:1.5px solid var(--ink);border-radius:20px;padding:22px 24px;box-shadow:6px 6px 0 var(--ink)}
+.pc:nth-child(2){margin-inline-start:28px}
+.pc h3{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:800;margin-bottom:8px}
+.pc h3 svg{color:var(--od)}
+.pc ul{list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--mut)}
+.pc li{display:flex;gap:10px}
+.pc li::before{content:"";width:7px;height:7px;margin-top:11px;border-radius:50%;background:var(--o);flex:none}
+.dk{background:var(--ink);color:#fff;border-block:1.5px solid var(--ink);padding:92px 0}
+.dk .gr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.dk .gr>*{min-width:0}
+.dk h2{font-size:clamp(28px,3.8vw,44px);font-weight:900;line-height:1.45;margin-bottom:12px}
+.dk .lead{color:#cbbfb3;margin-bottom:30px;max-width:480px}
+.dk .bo{border-color:#fff;box-shadow:4px 4px 0 #fff}
+.dk .bo:hover{box-shadow:6px 6px 0 #fff}
+.st{list-style:none}
+.st li{display:flex;gap:16px;padding-bottom:26px;position:relative}
+.st li:last-child{padding-bottom:0}
+.st li:not(:last-child)::before{content:"";position:absolute;top:44px;bottom:6px;right:21px;width:1.5px;background:currentColor;opacity:.25}
+.st .n{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--o);color:var(--ink);border:1.5px solid var(--ink)}
+.st .n .ic{width:20px;height:20px}
+.st h3{font-size:17px;font-weight:800;line-height:1.6;margin-bottom:2px;padding-top:6px}
+.st p{font-size:15px}
+.dk .st p{color:#e7ddd3}
+.fin{padding:92px 0}
+.fb{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;padding:44px 48px;border:1.5px solid var(--ink);border-radius:28px;background:var(--ol);box-shadow:8px 8px 0 var(--ink)}
+.fb svg.lg{width:96px;height:96px;animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 4px rgba(255,128,8,.35))}50%{filter:drop-shadow(0 0 20px rgba(255,128,8,.95))}}
+.fb h2{font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1.5;margin-bottom:4px}
+.fb p{color:var(--mut)}
+.lg2{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.lg2 i{font-style:normal;font-size:13px;font-weight:600;padding:0 14px;border-radius:99px;border:1.5px solid var(--ink);background:#fff}
+footer{background:var(--soft);border-top:1.5px solid var(--ink);padding:60px 0 0;font-size:14px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.fbr p{color:var(--mut);margin:14px 0 22px;max-width:330px}
+.fbr .brand{font-size:21px}
+.fc h4{font-size:13px;font-weight:800;color:var(--od);margin-bottom:12px}
+.fc a{display:flex;align-items:center;gap:12px;padding:6px 0}
+.fi{width:38px;height:38px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;flex:none;transition:transform .2s,background .2s,box-shadow .2s}
+.fi .ic{width:18px;height:18px}
+.fc a:hover .fi{background:var(--o);transform:translate(-2px,-2px);box-shadow:2px 2px 0 var(--ink)}
+.fc b{display:block;font-weight:700;font-size:14px;line-height:1.5}
+.fc small{display:block;font-size:12px;color:var(--mut);line-height:1.5;unicode-bidi:isolate}
+.fbt{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 0 28px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+.up{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;transition:transform .2s,background .2s}
+.up:hover{background:var(--o);transform:translateY(-3px)}
+@media(max-width:980px){.hero,.fx,.ai .gr,.dk .gr{grid-template-columns:1fr;gap:44px}.hero{padding-top:40px}.fx .sh{position:static}.sx{grid-template-columns:1fr 1fr}.sx li{border-top:1.5px solid var(--ink)}.sx li:nth-child(-n+2){border-top:0}.sx li:nth-child(odd){border-inline-start:0}.fb{grid-template-columns:1fr;text-align:center;justify-items:center}.lg2{justify-content:center}.fg{grid-template-columns:1fr 1fr}.fbr{grid-column:1/-1}}
+@media(max-width:640px){.links{display:none}.sx{grid-template-columns:1fr}.sx li{border-inline-start:0!important;border-top:1.5px solid var(--ink)!important}.sx li:first-child{border-top:0!important}.wrap{padding:0 18px}.sec,.ai,.dk{padding:64px 0}.sx-wrap{margin-top:56px}.pc:nth-child(2){margin-inline-start:0}.facts{flex-wrap:wrap}.facts div{flex:1 1 30%}.fb{padding:32px 22px}.fg{grid-template-columns:1fr;gap:28px}.fbt{flex-direction:column;align-items:flex-start}.tg{font-size:12.5px;padding:5px 12px 5px 9px}.f{grid-template-columns:50px 1fr;gap:14px}.ib{width:50px;height:50px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="seal" viewBox="0 0 100 100"><path d="M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z" fill="#ff8008" stroke="#ff8008" stroke-width="6" stroke-linejoin="round"/></symbol>
+<symbol id="logo" viewBox="0 0 100 100"><use href="#seal"/><path d="M30.2 54.2L43.8 67.7 70.8 38.5" fill="none" stroke="#fff" stroke-width="10.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="sealsoft" viewBox="0 0 100 100"><path d="M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z" fill="#fff1e3" stroke="#ff8008" stroke-width="4" stroke-linejoin="round"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.5 0 4 2 4 5"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 11l7 3 3 7z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V5"/><circle cx="12" cy="4" r="1"/><circle cx="9" cy="13" r=".8"/><circle cx="15" cy="13" r=".8"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l8 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M18 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="i-head" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v5H5a1 1 0 0 1-1-1z"/><path d="M20 14h-3v5h2a1 1 0 0 0 1-1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.2c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3.5c2 0 3.2 1 4.5 3l2 4c1.3 2 2.5 3 4.5 3H21"/><path d="M18 14l3 3-3 3"/><path d="M3 17h3.5c1.2 0 2.2-.4 3-1.2"/><path d="M13 8.2c.8-.8 1.8-1.2 3-1.2h5"/><path d="M18 4l3 3-3 3"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2"/><path d="M6.5 16c.4-1.6 1.5-2.4 2.5-2.4s2.1.8 2.5 2.4M14 10h4M14 13h3"/></symbol>
+<symbol id="i-enter" viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M4 12h10M10 8l4 4-4 4"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+<symbol id="i-at" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M15.5 12v1.5a2.5 2.5 0 0 0 5 0V12a8.5 8.5 0 1 0-3.4 6.8"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></symbol>
+</defs>
+</svg>
+
+<nav>
+<div class="wrap">
+<a class="brand" href="index.html"><svg><use href="#logo"/></svg><span>Orgin<small>ارجین</small></span></a>
+<div class="links"><a href="#bots">ربات‌ها</a><a href="#linkdoni">لینکدونی</a><a href="#sheykh">ارجین شیخ</a><a href="#shuffle">ارجین شافل</a></div>
+<a class="btn bo bs" href="index.html">ربات مدیریت گروه</a>
+</div>
+</nav>
+
+<main id="top">
+<div class="wrap">
+<section class="hero">
+<div>
+<div class="hl in"><svg class="ic"><use href="#i-bot"/></svg>ربات‌های ارجین</div>
+<h1 class="in" style="--d:.1s">ربات‌های دیگه‌ی ارجین برای <em>معرفی، کشف و گپ</em> توی گروه</h1>
+<p class="sub in" style="--d:.2s">علاوه بر ربات مدیریت گروه، سه ربات دیگه داریم: یکی برای ثبت گروه توی لینکدونی، یکی عضو خونسرد و حاضرجواب گروه، و یکی برای پیداکردن گروه‌های جدید.</p>
+<div class="cta in" style="--d:.3s">
+<a class="btn bo" href="#bots"><svg class="ic"><use href="#i-bot"/></svg>دیدن ربات‌ها</a>
+<a class="btn bw" href="index.html">ربات مدیریت گروه</a>
+</div>
+<div class="facts in" style="--d:.4s"><div><b>۳</b><span>ربات با کار جدا</span></div><div><b>۱</b><span>کانال رسمی</span></div><div><b>۱</b><span>گروه پشتیبانی</span></div></div>
+</div>
+<div class="art in" style="--d:.25s" id="art" aria-hidden="true">
+<svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49.5" fill="none" stroke="#b94f00" stroke-width=".4" stroke-dasharray="1.5 2.5"/></svg>
+<svg class="big" id="big"><use href="#logo"/></svg>
+<span class="tg t1"><svg class="ic"><use href="#i-link"/></svg>لینکدونی</span>
+<span class="tg t2"><svg class="ic"><use href="#i-chat"/></svg>ارجین شیخ</span>
+<span class="tg t3"><svg class="ic"><use href="#i-shuffle"/></svg>ارجین شافل</span>
+<span class="tg t4"><svg class="ic"><use href="#i-compass"/></svg>کشف گروه</span>
+</div>
+</section>
+</div>
+
+<section class="sec" id="bots">
+<div class="wrap">
+<div class="sh rv"><h2>سه ربات، سه کار جدا</h2><p>هر ربات یه کار مشخص رو انجام می‌ده. یکی رو انتخاب کن و جزئیاتش رو ببین.</p></div>
+<div class="bg">
+<article class="bc rv">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-link"/></svg></div><div><h3>ثبت گروه در لینکدونی</h3><code>@Linkdoniorgbot</code></div></div>
+<p>گروهت رو رایگان توی کانال لینکدونی ثبت کن و جلوی چشم اعضای فعال بذار.</p>
+<div class="ac"><a class="btn bw bs" href="#linkdoni">جزئیات</a><a class="btn bo bs" href="https://t.me/Linkdoniorgbot" target="_blank" rel="noopener">ورود به ربات</a></div>
+</article>
+<article class="bc rv">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-chat"/></svg></div><div><h3>ارجین شیخ</h3><code>@orginsheykhbot</code></div></div>
+<p>عضو خونسرد و حاضرجواب گروه، با لحن قدیمی. بی‌سروصدا می‌مونه و لحن گروه رو یاد می‌گیره.</p>
+<div class="ac"><a class="btn bw bs" href="#sheykh">جزئیات</a><a class="btn bo bs" href="https://t.me/orginsheykhbot" target="_blank" rel="noopener">ورود به ربات</a></div>
+</article>
+<article class="bc rv">
+<div class="hd"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-shuffle"/></svg></div><div><h3>ارجین شافل</h3><code>@OrginShufflebot</code></div></div>
+<p>گروه‌یاب رندوم: گروهت رو ثبت کن تا نشون داده بشه، یا توی اکسپلور بین گروه‌های ثبت‌شده بگرد.</p>
+<div class="ac"><a class="btn bw bs" href="#shuffle">جزئیات</a><a class="btn bo bs" href="https://t.me/OrginShufflebot" target="_blank" rel="noopener">ورود به ربات</a></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="sec" id="linkdoni">
+<div class="wrap fx">
+<div class="sh rv">
+<h2>گروهت رو رایگان توی لینکدونی ثبت کن</h2>
+<p>گروه تو لیاقت دیده‌شدن داره. با ربات رسمی ثبت گروه، گروهت رو توی کانال لینکدونی معرفی کن تا اعضای فعال ببیننش.</p>
+<div class="cta"><a class="btn bo" href="https://t.me/Linkdoniorgbot" target="_blank" rel="noopener"><svg class="ic"><use href="#i-send"/></svg>ورود به ربات ثبت گروه</a><a class="btn bw" href="https://t.me/orginchannel" target="_blank" rel="noopener">کانال لینکدونی</a></div>
+</div>
+<div class="fl">
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-eye"/></svg></div><div><h3>دیده‌شدن توی کانال لینکدونی</h3><p>گروهت توی کانال لینکدونی منتشر می‌شه و جلوی چشم اعضای فعال قرار می‌گیره.</p></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-card"/></svg></div><div><h3>معرفی کامل گروه</h3><p>گروه با تصویر، تعداد اعضا و توضیحات معرفی می‌شه، پس مخاطب قبل از ورود می‌دونه با چی طرفه.</p><div class="cs"><i>تصویر گروه</i><i>تعداد اعضا</i><i>توضیحات</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-enter"/></svg></div><div><h3>دسترسی مستقیم با دکمه ورود</h3><p>زیر معرفی گروه یه دکمه ورود هست و آدم‌ها با یه لمس وارد گروه می‌شن.</p></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-bolt"/></svg></div><div><h3>ثبت سریع و ساده</h3><p>کل ثبت‌نام چند مرحله بیشتر نیست و کاملاً رایگانه.</p></div></div>
+</div>
+</div>
+<div class="wrap sx-wrap">
+<div class="sh sm rv"><h2>مراحل ثبت گروه</h2></div>
+<ol class="sx rv">
+<li><span class="n">۱</span><p>از لینک <a href="https://t.me/Linkdoniorgbot" target="_blank" rel="noopener"><b>ربات ثبت گروه</b></a> وارد شو و ربات رو استارت کن.</p></li>
+<li><span class="n">۲</span><p>گزینه <b>«افزودن گروه در لینکدونی»</b> رو انتخاب کن.</p></li>
+<li><span class="n">۳</span><p>لینک خصوصی گروهت رو برای ربات بفرست.</p></li>
+<li><span class="n">۴</span><p>ربات‌ها رو به گروهت اضافه کن.</p></li>
+<li><span class="n">۵</span><p>منتظر تأیید ادمین بمون. بعد از تأیید، گروهت منتشر می‌شه.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="ai" id="sheykh">
+<div class="wrap gr">
+<div class="rv">
+<h2>ارجین شیخ، یه عضو خونسرد برای گروهتون</h2>
+<p class="lead">یه عضو حاضرجواب با لحن قدیمی که گروه رو شلوغ نمی‌کنه. بی‌سروصدا کنار بقیه می‌شینه و وقتی صداش کنید، جواب می‌ده.</p>
+<div class="cs"><i>گفتگوی طبیعی و انسانی</i><i>یادگیری لحن و شوخی‌های گروه</i><i>شناخت اعضا (اسم، اصل، اخلاق)</i><i>حضور بی‌سروصدا</i></div>
+<a class="btn" href="https://t.me/orginsheykhbot" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg>امتحانش کن</a>
+</div>
+<div class="pair rv">
+<div class="pc"><h3><svg class="ic"><use href="#i-at"/></svg>چطور صداش کنیم؟</h3><ul><li>بنویس <code>شیخ</code> یا <code>ارجین</code></li><li>روی پیامش ریپلای بزن</li><li>منشنش کن: <code>@orginsheykhbot</code></li></ul></div>
+<div class="pc"><h3><svg class="ic"><use href="#i-card"/></svg>اصل چیه؟</h3><ul><li>اگه شیخ کسی رو نشناسه، ازش اصل می‌خواد</li><li>خودت رو این‌جوری معرفی کن: اسم، سن، شهر</li><li>مثلاً: <code>مصطفی ۱۷ کرج</code></li></ul></div>
+<div class="pc"><h3><svg class="ic"><use href="#i-volume"/></svg>دستورهای ادمین‌ها</h3><ul><li><code>چت خاموش</code> شیخ ساکت می‌شه</li><li><code>چت روشن</code> شیخ برمی‌گرده</li><li>این دستورها فقط برای ادمین‌هاست</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="dk" id="shuffle">
+<div class="wrap gr">
+<div class="rv">
+<h2>گروه جدید پیدا کن یا گروهت رو معرفی کن</h2>
+<p class="lead">ارجین شافل | Orgin Shuffle ربات پیداکردن و معرفی گروه‌های تلگرامیه. چه بخوای گروهت دیده بشه و چه دنبال گروه جدید باشی، برای همین ساخته شده.</p>
+<a class="btn bo" href="https://t.me/OrginShufflebot" target="_blank" rel="noopener"><svg class="ic"><use href="#i-shuffle"/></svg>ورود به OrginShuffle</a>
+</div>
+<ul class="st rv">
+<li><span class="n"><svg class="ic"><use href="#i-mega"/></svg></span><div><h3>گروهت رو ثبت کن</h3><p>اگه صاحب گروهی، گروهت رو توی ربات ثبت کن تا به‌صورت الگوریتمی به کاربرانی که دنبال گروه می‌گردن نشون داده بشه و بیشتر دیده بشه.</p></div></li>
+<li><span class="n"><svg class="ic"><use href="#i-compass"/></svg></span><div><h3>توی اکسپلور بگرد</h3><p>وارد بخش اکسپلور شو و به‌صورت رندوم بین گروه‌های ثبت‌شده بگرد.</p></div></li>
+<li><span class="n"><svg class="ic"><use href="#i-users"/></svg></span><div><h3>با گروه‌های جدید آشنا شو</h3><p>راحت‌تر گروه موردنظرت رو پیدا کن و با گروه‌های تازه آشنا شو.</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="fin">
+<div class="wrap">
+<div class="fb rv">
+<svg class="lg"><use href="#logo"/></svg>
+<div><h2>ربات‌های ارجین، همه یه‌جا</h2><p>برای خبرها و آپدیت‌ها کانال رسمی رو دنبال کن و اگه سؤالی داشتی به پشتیبانی پیام بده.</p><div class="lg2"><i>لینکدونی</i><i>ارجین شیخ</i><i>ارجین شافل</i></div></div>
+<div class="cta"><a class="btn bo" href="https://t.me/orginchannel" target="_blank" rel="noopener">کانال رسمی</a><a class="btn bw" href="https://t.me/orginsupport" target="_blank" rel="noopener">پشتیبانی</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="fg">
+<div class="fbr">
+<a class="brand" href="index.html"><svg><use href="#logo"/></svg><span>Orgin<small>ارجین</small></span></a>
+<p>ربات‌های ارجین برای مدیریت، معرفی و کشف گروه‌های تلگرام.</p>
+<a class="btn bo bs" href="https://t.me/orginv1bot?startgroup=true" target="_blank" rel="noopener"><svg class="ic" style="width:18px;height:18px"><use href="#i-send"/></svg>افزودن ارجین به گروه</a>
+</div>
+<div class="fc"><h4>ربات‌ها</h4>
+<a href="https://t.me/orginv1bot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-bot"/></svg></span><span><b>ربات ارجین</b><small>@orginv1bot</small></span></a>
+<a href="https://t.me/Linkdoniorgbot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-link"/></svg></span><span><b>ثبت گروه در لینکدونی</b><small>@Linkdoniorgbot</small></span></a>
+<a href="https://t.me/orginsheykhbot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-chat"/></svg></span><span><b>ارجین شیخ</b><small>@orginsheykhbot</small></span></a>
+<a href="https://t.me/OrginShufflebot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-shuffle"/></svg></span><span><b>ارجین شافل</b><small>@OrginShufflebot</small></span></a>
+</div>
+<div class="fc"><h4>ارتباط</h4>
+<a href="https://t.me/orginchannel" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-mega"/></svg></span><span><b>کانال رسمی</b><small>خبرها و آپدیت‌ها</small></span></a>
+<a href="https://t.me/orginsupport" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-head"/></svg></span><span><b>گروه پشتیبانی</b><small>اگه مشکلی داشتی</small></span></a>
+<a href="https://t.me/NewMovieSupportHQ" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-user"/></svg></span><span><b>ارتباط با مالک</b><small>پیام مستقیم</small></span></a>
+</div>
+<div class="fc"><h4>پروژه</h4>
+<a href="index.html"><span class="fi"><svg class="ic"><use href="#i-book"/></svg></span><span><b>مستندات ارجین</b><small>راهنمای کامل ربات مدیریت</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-github"/></svg></span><span><b>گیت‌هاب</b><small>مخزن مستندات</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/discussions" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-chat"/></svg></span><span><b>گفت‌وگوها</b><small>پرسش و پاسخ</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-heart"/></svg></span><span><b>مشارکت</b><small>Issue و Pull Request</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/blob/main/SECURITY.md" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>امنیت</b><small>گزارش خصوصی آسیب‌پذیری</small></span></a>
+<a href="https://t.me/newmovie_org" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-heart"/></svg></span><span><b>حامی پروژه</b><small>NewMovie</small></span></a>
+</div>
+</div>
+<div class="fbt"><span>© ۲۰۲۶ Orgin | ارجین. همه حقوق محفوظ است.</span><a class="up" href="#top" aria-label="بازگشت به بالا"><svg class="ic"><use href="#i-up"/></svg></a></div>
+</div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const art=document.getElementById('art'),big=document.getElementById('big');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+art.addEventListener('pointermove',e=>{const r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;big.style.transform='rotate('+(x*10)+'deg) translate('+(x*10)+'px,'+(y*10)+'px)'});
+art.addEventListener('pointerleave',()=>{big.style.transform=''});
+}
+</script>
+</body>
+</html>

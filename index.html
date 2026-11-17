@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff8008">
+<title>Orgin | ارجین — ربات مدیریت گروه تلگرام</title>
+<meta name="description" content="ارجین ربات مدیریت گروه تلگرامه: کنترل پیام‌ها، مدیریت اعضا، ضداسپم، دعوت اجباری، خوشامد، آمار و یه دستیار هوش مصنوعی فارسی‌زبان.">
+<meta name="keywords" content="Orgin, ارجین, ربات تلگرام, ربات مدیریت گروه, هوش مصنوعی تلگرام, Telegram group management bot">
+<meta name="author" content="Orgin Labs">
+<link rel="canonical" href="https://orginlabs.github.io/orgin-bot-documentation/">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z' fill='%23ff8008' stroke='%23ff8008' stroke-width='6' stroke-linejoin='round'/%3E%3Cpath d='M30.2 54.2L43.8 67.7 70.8 38.5' fill='none' stroke='%23fff' stroke-width='10.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Orgin | ارجین — گروهت رو امن‌تر، مرتب‌تر و هوشمندتر مدیریت کن">
+<meta property="og:description" content="مدیریت، امنیت، رشد گروه و هوش مصنوعی در یک ربات تلگرامی.">
+<meta property="og:url" content="https://orginlabs.github.io/orgin-bot-documentation/">
+<meta property="og:image" content="https://orginlabs.github.io/orgin-bot-documentation/assets/og-image.png">
+<meta property="og:site_name" content="Orgin">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Orgin","alternateName":["ارجین","Orgin Bot"],"url":"https://orginlabs.github.io/orgin-bot-documentation/","inLanguage":"fa"},{"@type":"SoftwareApplication","name":"Orgin","applicationCategory":"CommunicationApplication","operatingSystem":"Telegram","url":"https://t.me/orginv1bot","description":"ربات مدیریت گروه تلگرام با ضداسپم، قفل‌های محتوا، دعوت اجباری و دستیار هوش مصنوعی.","inLanguage":["fa","en","ar","tr","ru"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--o:#ff8008;--od:#b94f00;--ol:#fff1e3;--ob:#ffd2a6;--ink:#1d1712;--mut:#6b5f55;--line:#eaded2;--bg:#fffdfa;--soft:#fff8f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;letter-spacing:-.01em}
+.brand svg{width:38px;height:38px;transition:transform .6s cubic-bezier(.3,1.4,.5,1)}
+.brand:hover svg{transform:rotate(30deg)}
+.brand small{font-weight:500;font-size:13px;color:var(--mut);margin-inline-start:6px}
+.links{display:flex;gap:4px}
+.links a{padding:6px 15px;border-radius:99px;font-size:14.5px;font-weight:500;color:var(--mut);transition:.2s}
+.links a:hover{background:var(--ol);color:var(--od)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:14px;font-weight:700;font-size:15px;border:1.5px solid var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:focus-visible,.tab:focus-visible,input:focus-visible,.row:focus-visible,.links a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.bo{background:var(--o);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.bo:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.bo:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.bw{background:#fff;color:var(--ink)}
+.bw:hover{background:var(--ol)}
+.bs{padding:8px 20px;font-size:14px;border-radius:12px;box-shadow:3px 3px 0 var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0 88px}
+.hero>*{min-width:0}
+.hl{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--od);margin-bottom:18px}
+.hl svg{width:20px;height:20px}
+h1{font-size:clamp(36px,5.4vw,64px);font-weight:900;line-height:1.3;letter-spacing:-.02em;margin-bottom:22px}
+h1 em{font-style:normal;position:relative;white-space:nowrap;z-index:0}
+h1 em::after{content:"";position:absolute;inset:auto 0 .08em 0;height:.34em;background:var(--o);opacity:.35;z-index:-1;transform-origin:right;animation:ul 1s .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ul{from{transform:scaleX(0)}}
+.sub{font-size:18px;color:var(--mut);max-width:520px;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;margin-top:44px;border:1.5px solid var(--ink);border-radius:16px;background:#fff;max-width:520px;overflow:hidden}
+.facts div{flex:1;padding:12px 18px;border-inline-start:1.5px solid var(--ink)}
+.facts div:first-child{border-inline-start:0}
+.facts b{display:block;font-size:22px;font-weight:900;line-height:1.5}
+.facts span{font-size:12.5px;color:var(--mut)}
+.art{position:relative;aspect-ratio:1;width:100%;max-width:470px;margin-inline:auto}
+.art .big{position:absolute;inset:8%;width:84%;height:84%;filter:drop-shadow(8px 10px 0 var(--ink));transition:transform .2s ease-out}
+.art .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(-360deg)}}
+.tg{position:absolute;display:flex;align-items:center;gap:8px;padding:7px 16px 7px 12px;background:#fff;border:1.5px solid var(--ink);border-radius:99px;font-size:13.5px;font-weight:700;box-shadow:3px 3px 0 var(--ink);animation:bob 5s ease-in-out infinite}
+.tg svg{width:18px;height:18px;color:var(--od)}
+.t1{top:6%;right:2%}.t2{top:30%;left:0;animation-delay:-1.2s}.t3{bottom:24%;right:0;animation-delay:-2.4s}.t4{bottom:4%;left:6%;animation-delay:-3.4s}
+@keyframes bob{50%{transform:translateY(-9px)}}
+.in{animation:up .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.sec{padding:92px 0;border-top:1.5px solid var(--ink)}
+.sh{margin-bottom:48px;max-width:640px}
+.sh h2{font-size:clamp(28px,3.8vw,44px);font-weight:900;line-height:1.45;letter-spacing:-.01em;margin-bottom:12px}
+.sh p{color:var(--mut);font-size:16.5px}
+.fx{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.fx .sh{position:sticky;top:110px;margin:0}
+.fl{border-bottom:1px solid var(--line)}
+.f{display:grid;grid-template-columns:62px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--line)}
+.f:first-child{border-top:0;padding-top:0}
+.ib{position:relative;width:58px;height:58px;display:grid;place-items:center}
+.ib .sb{position:absolute;inset:0;width:100%;height:100%;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.f:hover .sb{transform:rotate(30deg)}
+.ib .ic{position:relative;color:var(--od)}
+.f h3{font-size:19px;font-weight:800;line-height:1.6;margin-bottom:4px}
+.f p{font-size:15px;color:var(--mut);margin-bottom:12px}
+.cs{display:flex;flex-wrap:wrap;gap:7px}
+.cs i{font-style:normal;font-size:12.5px;font-weight:500;padding:1px 12px;border-radius:99px;background:var(--ol);border:1px solid var(--ob);color:#7a3a00}
+code{direction:ltr;unicode-bidi:isolate;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;padding:1px 8px;border-radius:7px;background:var(--ol);border:1px solid var(--ob);color:#7a3a00}
+.ai{background:var(--o);border-block:1.5px solid var(--ink);padding:92px 0}
+.ai .gr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ai h2{font-size:clamp(30px,4vw,48px);font-weight:900;line-height:1.4;margin-bottom:14px}
+.ai .lead{font-size:17.5px;max-width:460px;margin-bottom:26px}
+.ai .btn{background:var(--ink);color:#fff;box-shadow:4px 4px 0 #fff}
+.ai .btn:hover{box-shadow:6px 6px 0 #fff}
+.ai .pair{display:grid;gap:16px}
+.pc{background:#fff;border:1.5px solid var(--ink);border-radius:20px;padding:22px 24px;box-shadow:6px 6px 0 var(--ink)}
+.pc:nth-child(2){margin-inline-start:28px}
+.pc h3{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:800;margin-bottom:8px}
+.pc h3 svg{color:var(--od)}
+.pc ul{list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--mut)}
+.pc li{display:flex;gap:10px}
+.pc li::before{content:"";width:7px;height:7px;margin-top:11px;border-radius:50%;background:var(--o);flex:none}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab{padding:7px 18px;border-radius:99px;border:1.5px solid var(--line);background:#fff;cursor:pointer;font-size:14px;font-weight:600;color:var(--mut);transition:.2s}
+.tab:hover{border-color:var(--ink);color:var(--ink)}
+.tab.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.sbx{position:relative;margin-bottom:18px}
+.sbx svg{position:absolute;top:50%;right:18px;transform:translateY(-50%);color:var(--mut)}
+.sbx input{width:100%;padding:15px 50px 15px 18px;border-radius:14px;border:1.5px solid var(--ink);background:#fff;outline:none;box-shadow:4px 4px 0 var(--ob)}
+.sbx input::placeholder{color:#9a8c80}
+.rows{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.row{display:flex;align-items:center;gap:14px;padding:13px 18px;border:1.5px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;text-align:start;transition:.2s;animation:up .4s both}
+.row:hover{border-color:var(--ink);background:var(--ol);transform:translateX(-3px)}
+.row .k{min-width:126px;font-weight:800;font-size:14.5px}
+.row .e{direction:ltr;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--od);min-width:90px;text-align:left}
+.row .d{font-size:13.5px;color:var(--mut);margin-inline-start:auto}
+.none{padding:30px;text-align:center;color:var(--mut);border:1.5px dashed var(--ob);border-radius:14px;grid-column:1/-1}
+.note{margin-top:18px;font-size:13.5px;color:var(--mut);max-width:760px}
+.plans{display:grid;grid-template-columns:1.15fr repeat(3,1fr);gap:16px;align-items:stretch}
+.p{background:#fff;border:1.5px solid var(--ink);border-radius:20px;padding:26px;display:flex;flex-direction:column;position:relative}
+.p h3{font-size:17px;font-weight:800;margin-bottom:6px}
+.p .pr{font-size:36px;font-weight:900;line-height:1.5;display:flex;align-items:baseline;gap:8px}
+.p .pr small{font-size:13px;font-weight:500;color:var(--mut)}
+.p .pr svg{width:22px;height:22px;color:var(--o);align-self:center;fill:currentColor;stroke:var(--ink);stroke-width:1.4}
+.p.best{background:var(--o);box-shadow:6px 6px 0 var(--ink)}
+.p.best small{color:var(--ink)}
+.p .bd{position:absolute;top:-14px;right:22px;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:1px 14px;border-radius:99px}
+.p ul{list-style:none;display:grid;gap:9px;font-size:14px;color:var(--mut)}
+.p li{display:flex;gap:9px}
+.p li svg{width:17px;height:17px;margin-top:6px;color:var(--od)}
+.pf{margin-top:18px;padding:24px 28px;border:1.5px solid var(--ink);border-radius:20px;background:var(--soft)}
+.pf h3{font-size:16px;font-weight:800;margin-bottom:12px}
+.dk{background:var(--ink);color:#fff;border-block:1.5px solid var(--ink);padding:92px 0}
+.dk .gr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.dk h2{font-size:clamp(28px,3.8vw,44px);font-weight:900;line-height:1.45;margin-bottom:12px}
+.dk .lead{color:#cbbfb3;margin-bottom:30px;max-width:460px}
+.num{font-size:clamp(90px,16vw,190px);font-weight:900;line-height:1;color:var(--o);text-align:center}
+.num small{display:block;font-size:18px;font-weight:500;color:#cbbfb3;line-height:1.7;margin-top:10px}
+.st{list-style:none}
+.st li{display:flex;gap:16px;padding-bottom:20px;position:relative}
+.st li:last-child{padding-bottom:0}
+.st li:not(:last-child)::before{content:"";position:absolute;top:38px;bottom:4px;right:17px;width:1.5px;background:currentColor;opacity:.25}
+.st .n{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;background:var(--o);color:var(--ink);border:1.5px solid var(--ink)}
+.st p{padding-top:3px;font-size:15px}
+.dk .st p{color:#e7ddd3}
+.dk code{background:#2c241d;border-color:#4a3c30;color:#ffb870}
+.sx{display:grid;grid-template-columns:repeat(5,1fr);gap:0;list-style:none;border:1.5px solid var(--ink);border-radius:22px;background:#fff;overflow:hidden}
+.sx li{padding:26px 22px;border-inline-start:1.5px solid var(--ink);position:relative;transition:background .25s}
+.sx li:first-child{border-inline-start:0}
+.sx li:hover{background:var(--ol)}
+.sx .n{display:block;font-size:46px;font-weight:900;line-height:1.2;color:var(--o);-webkit-text-stroke:1.5px var(--ink);margin-bottom:8px}
+.sx p{font-size:14.5px}
+.sx b{font-weight:800}
+.fin{padding:92px 0}
+.fb{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;padding:44px 48px;border:1.5px solid var(--ink);border-radius:28px;background:var(--ol);box-shadow:8px 8px 0 var(--ink)}
+.fb svg.lg{width:96px;height:96px;animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 4px rgba(255,128,8,.35))}50%{filter:drop-shadow(0 0 20px rgba(255,128,8,.95))}}
+.fb h2{font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1.5;margin-bottom:4px}
+.fb p{color:var(--mut)}
+.lg2{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.lg2 i{font-style:normal;font-size:13px;font-weight:600;padding:0 14px;border-radius:99px;border:1.5px solid var(--ink);background:#fff}
+footer{background:var(--soft);border-top:1.5px solid var(--ink);padding:60px 0 0;font-size:14px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.fbr p{color:var(--mut);margin:14px 0 22px;max-width:330px}
+.fbr .brand{font-size:21px}
+.fc h4{font-size:13px;font-weight:800;color:var(--od);margin-bottom:12px}
+.fc a{display:flex;align-items:center;gap:12px;padding:6px 0}
+.fi{width:38px;height:38px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;flex:none;transition:transform .2s,background .2s,box-shadow .2s}
+.fi .ic{width:18px;height:18px}
+.fc a:hover .fi{background:var(--o);transform:translate(-2px,-2px);box-shadow:2px 2px 0 var(--ink)}
+.fc b{display:block;font-weight:700;font-size:14px;line-height:1.5}
+.fc small{display:block;font-size:12px;color:var(--mut);line-height:1.5;unicode-bidi:isolate}
+.fbt{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 0 28px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+.up{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;display:grid;place-items:center;transition:transform .2s,background .2s}
+.up:hover{background:var(--o);transform:translateY(-3px)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:9px 22px;border-radius:12px;font-size:14px;z-index:99;transition:.3s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:980px){.hero,.fx,.ai .gr,.dk .gr{grid-template-columns:1fr;gap:44px}.hero{padding-top:40px}.fx .sh{position:static}.plans{grid-template-columns:1fr 1fr}.p.free{grid-column:1/-1}.sx{grid-template-columns:1fr 1fr}.sx li{border-top:1.5px solid var(--ink)}.sx li:nth-child(-n+2){border-top:0}.sx li:nth-child(odd){border-inline-start:0}.fb{grid-template-columns:1fr;text-align:center;justify-items:center}.lg2{justify-content:center}.fg{grid-template-columns:1fr 1fr}.fbr{grid-column:1/-1}}
+@media(max-width:640px){.links{display:none}.rows,.plans,.sx{grid-template-columns:1fr}.p.free{grid-column:auto}.sx li{border-inline-start:0!important;border-top:1.5px solid var(--ink)!important}.sx li:first-child{border-top:0!important}.row{flex-wrap:wrap;gap:2px 12px}.row .d{margin:0;width:100%}.wrap{padding:0 18px}.sec,.ai,.dk{padding:64px 0}.pc:nth-child(2){margin-inline-start:0}.facts{flex-wrap:wrap}.facts div{flex:1 1 40%}.fb{padding:32px 22px}.fg{grid-template-columns:1fr;gap:28px}.fbt{flex-direction:column;align-items:flex-start}.tg{font-size:12.5px;padding:5px 12px 5px 9px}h1 em{white-space:normal}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="seal" viewBox="0 0 100 100"><path d="M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z" fill="#ff8008" stroke="#ff8008" stroke-width="6" stroke-linejoin="round"/></symbol>
+<symbol id="logo" viewBox="0 0 100 100"><use href="#seal"/><path d="M30.2 54.2L43.8 67.7 70.8 38.5" fill="none" stroke="#fff" stroke-width="10.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="sealsoft" viewBox="0 0 100 100"><path d="M50 6L59.71 13.78 72 11.89 76.52 23.48 88.11 28 86.22 40.29 94 50 86.22 59.71 88.11 72 76.52 76.52 72 88.11 59.71 86.22 50 94 40.29 86.22 28 88.11 23.48 76.52 11.89 72 13.78 59.71 6 50 13.78 40.29 11.89 28 23.48 23.48 28 11.89 40.29 13.78z" fill="#fff1e3" stroke="#ff8008" stroke-width="4" stroke-linejoin="round"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.5 0 4 2 4 5"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M4 18h16"/><path d="M5 18l-1.5-8L8 13l4-6 4 6 4.5-3L19 18z"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20V10M12 20V4M19 20v-7"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 11l7 3 3 7z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V5"/><circle cx="12" cy="4" r="1"/><circle cx="9" cy="13" r=".8"/><circle cx="15" cy="13" r=".8"/></symbol>
+<symbol id="i-game" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="5"/><path d="M8 11v4M6 13h4"/><circle cx="15.5" cy="12" r=".8"/><circle cx="17.5" cy="14" r=".8"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l8 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M18 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="i-head" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v5H5a1 1 0 0 1-1-1z"/><path d="M20 14h-3v5h2a1 1 0 0 0 1-1z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.2c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3.5c2 0 3.2 1 4.5 3l2 4c1.3 2 2.5 3 4.5 3H21"/><path d="M18 14l3 3-3 3"/><path d="M3 17h3.5c1.2 0 2.2-.4 3-1.2"/><path d="M13 8.2c.8-.8 1.8-1.2 3-1.2h5"/><path d="M18 4l3 3-3 3"/></symbol>
+</defs>
+</svg>
+
+<nav>
+<div class="wrap">
+<a class="brand" href="#top"><svg><use href="#logo"/></svg><span>Orgin<small>ارجین</small></span></a>
+<div class="links"><a href="#features">امکانات</a><a href="#ai">هوش مصنوعی</a><a href="#commands">دستورها</a><a href="#premium">Premium</a><a href="#start">شروع سریع</a><a href="bots.html">ربات‌های دیگر</a></div>
+<a class="btn bo bs" href="https://t.me/orginv1bot" target="_blank" rel="noopener">ورود به ربات</a>
+</div>
+</nav>
+
+<main id="top">
+<div class="wrap">
+<section class="hero">
+<div>
+<div class="hl in"><svg class="ic"><use href="#i-shield"/></svg>ربات مدیریت گروه تلگرام</div>
+<h1 class="in" style="--d:.1s">گروهت رو <em>امن‌تر، مرتب‌تر</em> و هوشمندتر مدیریت کن</h1>
+<p class="sub in" style="--d:.2s">ارجین رو بذار توی گروهت تا خودش حواسش به اسپم، لینک‌های مزاحم و اعضای تازه‌وارد باشه. تنظیمات هم از یه پنل ساده انجام می‌شه، پس لازم نیست یه عالمه دستور حفظ کنی.</p>
+<div class="cta in" style="--d:.3s">
+<a class="btn bo" href="https://t.me/orginv1bot?startgroup=true" target="_blank" rel="noopener"><svg class="ic"><use href="#i-send"/></svg>افزودن به گروه</a>
+<a class="btn bw" href="https://orginlabs.github.io/orgin-bot-documentation/" target="_blank" rel="noopener">مشاهده مستندات</a>
+</div>
+<div class="facts in" style="--d:.4s"><div><b>۵</b><span>زبان پشتیبانی‌شده</span></div><div><b>۶</b><span>نقش با دسترسی جدا</span></div><div><b>رایگان</b><span>برای شروع</span></div></div>
+</div>
+<div class="art in" style="--d:.25s" id="art" aria-hidden="true">
+<svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49.5" fill="none" stroke="#b94f00" stroke-width=".4" stroke-dasharray="1.5 2.5"/></svg>
+<svg class="big" id="big"><use href="#logo"/></svg>
+<span class="tg t1"><svg class="ic"><use href="#i-shield"/></svg>ضداسپم</span>
+<span class="tg t2"><svg class="ic"><use href="#i-lock"/></svg>قفل‌های محتوا</span>
+<span class="tg t3"><svg class="ic"><use href="#i-spark"/></svg>هوش مصنوعی</span>
+<span class="tg t4"><svg class="ic"><use href="#i-trend"/></svg>دعوت اجباری</span>
+</div>
+</section>
+</div>
+
+<section class="sec" id="features">
+<div class="wrap fx">
+<div class="sh rv"><h2>کارهای خسته‌کننده گروه رو بسپار به ارجین</h2><p>از پاک‌کردن اسپم تا خوشامدگویی به اعضای جدید؛ همه‌چی همین‌جاست و لازم نیست چند تا ربات مختلف بذاری.</p></div>
+<div class="fl">
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-users"/></svg></div><div><h3>مدیریت اعضا</h3><p>کافیه روی پیام یه نفر ریپلای کنی و دستور رو بزنی. اگه ریپلای نداری، آیدی عددی یا یوزرنیمش هم جواب می‌ده.</p><div class="cs"><i>بن و رفع بن</i><i>اخراج</i><i>سکوت زمان‌دار</i><i>اخطار با سقف و اقدام خودکار</i><i>پین</i><i>پاک‌سازی پیام‌ها</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-shield"/></svg></div><div><h3>امنیت و ضداسپم</h3><p>نمی‌ذاره گروه زیر پیام‌های تبلیغاتی و تکراری گم بشه. هرکدوم رو از پنل روشن و خاموش می‌کنی و جزئیاتش، مثلاً تعداد پیام یا مهلت کپچا، همون‌جا قابل تنظیمه.</p><div class="cs"><i>ضداسپم</i><i>ضدفلود</i><i>ضدتبچی</i><i>ضدربات</i><i>کپچا</i><i>حالت شب</i><i>تأیید عضویت</i><i>ضدحمله</i><i>گزارش تخلف</i><i>کانال گزارش مدیریتی</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-lock"/></svg></div><div><h3>قفل‌های محتوا</h3><p>خودت تصمیم بگیر توی گروه چی فرستاده بشه و چی نه. مثلاً <code>قفل لینک</code> لینک‌ها رو می‌بنده، <code>بازکردن لینک</code> دوباره آزادشون می‌کنه و با <code>وضعیت قفل ها</code> می‌بینی الان چی بسته‌ست.</p><div class="cs"><i>لینک و هایپرلینک</i><i>یوزرنیم و هشتگ</i><i>فوروارد</i><i>عکس و ویدئو</i><i>GIF و استیکر</i><i>ویس و موسیقی</i><i>فایل</i><i>مخاطب و موقعیت</i><i>نظرسنجی و بازی</i><i>فحاشی</i><i>زبان و ایموجی</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-trend"/></svg></div><div><h3>رشد گروه و دعوت اجباری</h3><p>هر عضو تازه تا وقتی چند نفر رو به گروه دعوت نکرده، ساکت می‌مونه. ارجین یه لینک دعوت مخصوص خودش بهش می‌ده و به‌محض اینکه دعوت‌ها ثبت شدن، سکوتش رو برمی‌داره. از پنل گروه، قسمت رشد گروه، می‌تونی تنظیمش کنی.</p><div class="cs"><i>تعداد و مهلت دلخواه</i><i>معاف‌کردن کاربر</i><i>برترین دعوت‌کننده‌ها</i><i>عضویت اجباری کانال</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-chat"/></svg></div><div><h3>خوشامد، خداحافظی و قوانین</h3><p>برای هر عضو تازه یه پیام خوشامد بذار و موقع رفتنش خداحافظی. می‌تونی اسم عضو، اسم گروه، تعداد اعضا، ساعت و تاریخ رو هم توی متن بیاری.</p><div class="cs"><i>پیام خوشامد</i><i>پیام خداحافظی</i><i>متن‌های پیش‌فرض چندزبانه</i><i>قوانین گروه</i><i>فیلتر کلمات</i><i>پاسخ خودکار</i><i>عنوان و توضیحات گروه</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-crown"/></svg></div><div><h3>نقش‌ها و دسترسی‌ها</h3><p>همه نباید به همه‌چی دسترسی داشته باشن. هر نقش حدود خودش رو داره و جزئیاتش رو توی پنل گروه می‌بینی.</p><div class="cs"><i>مدیر تلگرام</i><i>جانشین مالک</i><i>ناظر</i><i>عضو ویژه (VIP)</i><i>فهرست سفید</i><i>عضو عادی</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-link"/></svg></div><div><h3>لینک دعوت با چند انتخاب</h3><p>مدیرهایی که اجازه دعوت دارن با دستور <code>لینک</code> یه منو باز می‌کنن و از همون‌جا لینک مورد نظرشون رو انتخاب می‌کنن.</p><div class="cs"><i>کارت دعوت همراه تصویر گروه</i><i>لینک عمومی یا ذخیره‌شده</i><i>لینک یک‌بارمصرف</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-chart"/></svg></div><div><h3>آمار، رتبه و سرگرمی</h3><p>ببین گروه چقدر فعاله و کی بیشتر از همه حرف می‌زنه. یه بخش سرگرمی هم داره که اگه خوشت نیومد، مدیرها می‌تونن کامل خاموشش کنن.</p><div class="cs"><i>آمار گروه و امروز</i><i>فعال‌ترین اعضا</i><i>رتبه دعوت‌کننده‌ها</i><i>جوک و فال</i><i>دانستنی و چالش</i><i>تاس و سکه</i><i>بازی</i></div></div></div>
+<div class="f rv"><div class="ib"><svg class="sb"><use href="#sealsoft"/></svg><svg class="ic"><use href="#i-tool"/></svg></div><div><h3>ابزارهای مدیریتی</h3><p>برای مرتب‌نگه‌داشتن گروه. یه نکته: تلگرام فهرست کامل اعضا رو به ربات‌ها نمی‌ده، برای همین بعضی ابزارها فقط روی اعضایی کار می‌کنن که ارجین قبلاً دیده.</p><div class="cs"><i>فهرست بن‌شده‌ها و ساکت‌شده‌ها</i><i>پاک‌سازی ربات‌ها</i><i>پاک‌سازی حساب‌های حذف‌شده</i><i>همگام‌سازی مدیرها</i><i>بازنشانی تنظیمات</i><i>پشتیبان و بازیابی (Premium)</i></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="ai" id="ai">
+<div class="wrap gr">
+<div class="rv">
+<h2>ارجین فقط مدیر نیست، می‌تونی باهاش حرف هم بزنی</h2>
+<p class="lead">توی پیوی ربات هرچی خواستی بپرس. توی گروه هم کافیه پیامت رو با «ارجین» شروع کنی تا جوابت رو بده.</p>
+<a class="btn" href="https://t.me/orginv1bot" target="_blank" rel="noopener"><svg class="ic"><use href="#i-spark"/></svg>امتحانش کن</a>
+</div>
+<div class="pair rv">
+<div class="pc"><h3><svg class="ic"><use href="#i-user"/></svg>توی پیوی ربات</h3><ul><li>جواب سؤال‌ها، کمک برای نوشتن و ایده‌گرفتن</li><li>گفتگوهات ذخیره می‌شن و می‌تونی برگردی سراغشون</li><li>اگه فعال باشه، گفتگوهای طولانی رو خلاصه می‌کنه و یادش می‌مونه</li><li>اگه نمی‌دونی فلان تنظیم کجاست، ازش بپرس</li><li>هر روز یه سهمیه داری و با Premium بیشتر می‌شه</li></ul></div>
+<div class="pc"><h3><svg class="ic"><use href="#i-users"/></svg>توی گروه</h3><ul><li>به پیام‌هایی که با «ارجین» شروع بشن جواب می‌ده؛ بسته به تنظیمات، منشن یا ریپلای هم ممکنه کار کنه</li><li>پیام‌های مشکوک به اسپم و تبلیغات رو بررسی می‌کنه (Pro)</li><li>اگه روشنش کنی، پیام‌ها رو خودکار ترجمه می‌کنه</li><li>کمکت می‌کنه گزینه‌های پنل رو راحت‌تر پیدا کنی</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="commands" style="border-top:0">
+<div class="wrap">
+<div class="sh rv"><h2>فهرست دستورها</h2><p>یه دسته رو باز کن یا دنبال دستور خاصی بگرد. روی هر دستور بزنی کپی می‌شه. دستورها رو توی گروه می‌فرستی و اگه به یه نفر مربوط می‌شه، روی پیامش ریپلای می‌کنی.</p></div>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div class="sbx"><svg class="ic"><use href="#i-search"/></svg><input id="q" type="search" placeholder="مثلاً: سکوت، قفل، ban، stats" autocomplete="off" aria-label="جست‌وجوی دستور"></div>
+<div class="rows" id="rows"></div>
+<p class="note">بعضی دستورها فقط برای مدیرها یا کاربرهای Premium کار می‌کنن. اگه دستوری جواب نداد، اول مطمئن شو ارجین توی گروه دسترسی لازم رو داره، بعد <code>/help</code> رو بزن. برای زمان هم می‌تونی مثل <code>30s</code>، <code>10m</code>، <code>2h</code> یا <code>1d</code> بنویسی.</p>
+</div>
+</section>
+
+<section class="sec" id="premium">
+<div class="wrap">
+<div class="sh rv"><h2>رایگان شروع کن، هر وقت خواستی Premium بگیر</h2><p>نسخه رایگان برای خیلی از گروه‌ها کافیه. اگه چیزای بیشتری خواستی، Premium قابلیت‌های اضافه‌ای رو باز می‌کنه.</p></div>
+<div class="plans rv">
+<div class="p free"><h3>نسخه رایگان</h3><ul><li><svg class="ic"><use href="#i-check"/></svg>مدیریت اعضا و اخطارها</li><li><svg class="ic"><use href="#i-check"/></svg>قفل‌ها و ضداسپم</li><li><svg class="ic"><use href="#i-check"/></svg>خوشامد و قوانین</li><li><svg class="ic"><use href="#i-check"/></svg>آمار و ابزارهای معمول</li></ul></div>
+<div class="p"><h3>یک ماهه</h3><div class="pr">۱۵۰<svg class="ic"><use href="#i-star"/></svg><small>Telegram Stars</small></div></div>
+<div class="p best"><span class="bd">پیشنهادی</span><h3>سه ماهه</h3><div class="pr">۴۰۰<svg class="ic"><use href="#i-star"/></svg><small>Telegram Stars</small></div></div>
+<div class="p"><h3>دوازده ماهه</h3><div class="pr">۱٬۴۰۰<svg class="ic"><use href="#i-star"/></svg><small>Telegram Stars</small></div></div>
+</div>
+<div class="pf rv"><h3>با Premium چی گیرت میاد؟</h3><div class="cs"><i>خداحافظی اختصاصی</i><i>سیستم تیکت</i><i>پشتیبان‌گیری و بازیابی</i><i>سقف بالاتر فیلتر کلمات</i><i>رسانه موقت</i><i>ضدخیانت مدیران</i><i>هوش مصنوعی پیشرفته</i><i>سهمیه بیشتر چت‌بات</i></div></div>
+<p class="note">برای خرید، پیوی ربات رو باز کن و «خرید پریمیوم» رو بزن. قیمت‌ها ممکنه عوض بشن، پس قبل از پرداخت همون‌جا یه نگاه بهشون بنداز.</p>
+</div>
+</section>
+
+<section class="dk">
+<div class="wrap gr">
+<div class="rv">
+<h2>Premium رایگان با دعوت دوستات</h2>
+<p class="lead">لینک اختصاصیت رو به دوستات بده. هر دعوتی که کامل بشه، برات Premium هدیه داره.</p>
+<ol class="st">
+<li><span class="n">۱</span><p>وارد پیوی ربات شو و دستور <code>/ref</code> رو بفرست.</p></li>
+<li><span class="n">۲</span><p>لینک دعوت اختصاصیت رو برای دوستت بفرست.</p></li>
+<li><span class="n">۳</span><p>دوستت باید از همون لینک وارد ربات بشه.</p></li>
+<li><span class="n">۴</span><p>بعدش دوستت باید ارجین رو به یه گروه اضافه کنه. تا این کار انجام نشه، پاداش ثبت نمی‌شه و فقط Start زدن کافی نیست.</p></li>
+</ol>
+</div>
+<div class="num rv">۲ روز<small>Premium به‌ازای هر دعوت کامل</small></div>
+</div>
+</section>
+
+<section class="sec" id="start" style="border-top:0">
+<div class="wrap">
+<div class="sh rv"><h2>در پنج قدم آماده‌ای</h2><p>راه‌اندازیش چند دقیقه بیشتر طول نمی‌کشه. بعدش برای بیشتر کارها کافیه روی پیام یه نفر ریپلای کنی و دستور رو بفرستی.</p></div>
+<ol class="sx rv">
+<li><span class="n">۱</span><p>از لینک <a href="https://t.me/orginv1bot" target="_blank" rel="noopener"><b>ربات ارجین</b></a> وارد پیوی شو و <code>/start</code> رو بفرست.</p></li>
+<li><span class="n">۲</span><p>دکمه <b>«افزودن به گروه»</b> رو بزن و گروهت رو انتخاب کن.</p></li>
+<li><span class="n">۳</span><p>ارجین رو توی گروه ادمین کن و دسترسی‌هاش رو بده. بدون دسترسی کافی، حذف پیام، سکوت یا بن انجام نمی‌شه.</p></li>
+<li><span class="n">۴</span><p>توی پیوی ربات وارد <b>«گروه‌های من»</b> شو و گروهت رو انتخاب کن تا پنل باز بشه.</p></li>
+<li><span class="n">۵</span><p>برای دیدن دستورها <code>/help</code> رو بفرست، یا توی گروه کلمه <b>راهنما</b> رو بنویس.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="fin">
+<div class="wrap">
+<div class="fb rv">
+<svg class="lg"><use href="#logo"/></svg>
+<div><h2>گروهت رو امن‌تر، مرتب‌تر و هوشمندتر مدیریت کن</h2><p>بذارش توی گروهت و ببین چطوره. اگه خوشت نیومد، هر وقت خواستی می‌تونی حذفش کنی.</p><div class="lg2"><i>فارسی</i><i>English</i><i>العربية</i><i>Türkçe</i><i>Русский</i></div></div>
+<div class="cta"><a class="btn bo" href="https://t.me/orginv1bot?startgroup=true" target="_blank" rel="noopener">افزودن به گروه</a><a class="btn bw" href="https://t.me/orginsupport" target="_blank" rel="noopener">پشتیبانی</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="fg">
+<div class="fbr">
+<a class="brand" href="#top"><svg><use href="#logo"/></svg><span>Orgin<small>ارجین</small></span></a>
+<p>ربات مدیریت گروه تلگرام، ساخته‌شده تا نگه‌داری گروه کمتر وقتت رو بگیره.</p>
+<a class="btn bo bs" href="https://t.me/orginv1bot?startgroup=true" target="_blank" rel="noopener"><svg class="ic" style="width:18px;height:18px"><use href="#i-send"/></svg>افزودن به گروه</a>
+</div>
+<div class="fc"><h4>ربات‌ها</h4>
+<a href="https://t.me/orginv1bot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-bot"/></svg></span><span><b>ربات ارجین</b><small>@orginv1bot</small></span></a>
+<a href="https://t.me/Linkdoniorgbot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-link"/></svg></span><span><b>ثبت گروه در لینکدونی</b><small>@Linkdoniorgbot</small></span></a>
+<a href="https://t.me/orginsheykhbot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-chat"/></svg></span><span><b>ارجین شیخ</b><small>@orginsheykhbot</small></span></a>
+<a href="https://t.me/OrginShufflebot" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-shuffle"/></svg></span><span><b>ارجین شافل</b><small>@OrginShufflebot</small></span></a>
+</div>
+<div class="fc"><h4>ارتباط</h4>
+<a href="https://t.me/orginchanel" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-mega"/></svg></span><span><b>کانال رسمی</b><small>خبرها و آپدیت‌ها</small></span></a>
+<a href="https://t.me/orginsupport" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-head"/></svg></span><span><b>گروه پشتیبانی</b><small>اگه مشکلی داشتی</small></span></a>
+<a href="https://t.me/NewMovieSupportHQ" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-user"/></svg></span><span><b>ارتباط با مالک</b><small>پیام مستقیم</small></span></a>
+</div>
+<div class="fc"><h4>پروژه</h4>
+<a href="https://orginlabs.github.io/orgin-bot-documentation/" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-book"/></svg></span><span><b>مستندات</b><small>راهنمای کامل</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-github"/></svg></span><span><b>گیت‌هاب</b><small>مخزن مستندات</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/discussions" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-chat"/></svg></span><span><b>گفت‌وگوها</b><small>پرسش و پاسخ</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/releases" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-star"/></svg></span><span><b>انتشارها</b><small>نسخه‌های مستندات</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-heart"/></svg></span><span><b>مشارکت</b><small>Issue و Pull Request</small></span></a>
+<a href="https://github.com/orginlabs/orgin-bot-documentation/blob/main/SECURITY.md" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>امنیت</b><small>گزارش خصوصی آسیب‌پذیری</small></span></a>
+<a href="https://t.me/newmovie_org" target="_blank" rel="noopener"><span class="fi"><svg class="ic"><use href="#i-heart"/></svg></span><span><b>حامی پروژه</b><small>NewMovie</small></span></a>
+</div>
+</div>
+<div class="fbt"><span>© ۲۰۲۶ Orgin | ارجین. همه حقوق محفوظ است.</span><a class="up" href="#top" aria-label="بازگشت به بالا"><svg class="ic"><use href="#i-up"/></svg></a></div>
+</div>
+</footer>
+<div class="toast" id="toast">کپی شد</div>
+
+<script>
+const D={
+"اصلی":["/start|/start|شروع و نمایش منو","/help|/help|نمایش راهنما","/lang|/lang|انتخاب زبان","/ref|/ref|لینک دعوت برای Premium رایگان","پنل|panel|دکمه ورود به پنل گروه","نصب|install|راهنمای فعال‌سازی در گروه","نسخه|version|نسخه و تغییرات"],
+"مدیریت اعضا":["بن|ban|بن‌کردن عضو","رفع بن|unban|برداشتن بن","کیل|kick|اخراج عضو","سکوت|mute|سکوت عضو","سکوت 10m|mute 10m|سکوت به مدت مشخص","رفع سکوت|unmute|برداشتن سکوت","اخطار|warn|ثبت اخطار","حذف اخطار|unwarn|حذف اخطار","اخطارها|warns|مشاهده اخطارها","پاکسازی اخطارها|warnreset|پاک‌کردن اخطارها","تنظیم اخطار 3|setwarn 3|تعیین سقف اخطار","اقدام اخطار بن|warnact ban|اقدام بعد از رسیدن به سقف","ارتقا مدیر|promote|ارتقای نقش مدیریتی","عزل مدیر|demote|برداشتن نقش مدیریتی"],
+"پیام و قفل":["پین|pin|پین‌کردن پیام ریپلای‌شده","حذف پین|unpin|برداشتن پین","حذف|del|حذف پیام ریپلای‌شده","پاکسازی 50|purge 50|پاک‌سازی تعداد مشخصی پیام","قفل لینک|lock link|قفل‌کردن لینک‌ها","بازکردن لینک|unlock link|بازکردن قفل لینک","قفل چت|lock chat|بستن ارسال پیام در گروه","بازکردن چت|unlock chat|بازکردن ارسال پیام","وضعیت قفل ها|locks|نمایش وضعیت قفل‌ها","ضد اسپم روشن|antispam on|روشن‌کردن ضداسپم","ضد فلود روشن|flood on|روشن‌کردن ضدفلود","کاپچا روشن|captcha on|روشن‌کردن کپچا","حالت شب روشن|night on|روشن‌کردن حالت شب"],
+"محتوا و قوانین":["قوانین|rules|نمایش قوانین گروه","تنظیم قوانین|setrules|ثبت قوانین","حذف قوانین|delrules|حذف قوانین","تنظیم خوشامد|setwelcome|تنظیم پیام خوشامد","تنظیم خروج|setgoodbye|تنظیم پیام خداحافظی","فیلتر کلمه1, کلمه2|filter word1, word2|افزودن کلمات به فیلتر","حذف فیلتر کلمه1|unfilter word1|حذف یک کلمه از فیلتر","لیست فیلتر|filters|نمایش کلمات فیلترشده","پاسخ سلام به درود!|reply hi to Hello!|ساخت پاسخ خودکار","حذف پاسخ سلام|unreply hi|حذف پاسخ خودکار","لیست پاسخ|replies|نمایش پاسخ‌های خودکار"],
+"امنیت و رشد":["ضد تبچی روشن|antitabchi on|روشن‌کردن ضدتبچی","قفل ربات|lock bots|کنترل ورود ربات‌ها","تأیید عضویت روشن|—|روشن‌کردن بررسی عضویت در صورت پشتیبانی","ضد خیانت روشن|antibetray on|قابلیت Premium مربوط به مدیرها","اد اجباری 3|fadd 3|تعیین تعداد دعوت اجباری","اد اجباری خاموش|fadd off|خاموش‌کردن دعوت اجباری","وضعیت اد من|myadds|وضعیت دعوت‌های خودت","پاکسازی ادها|resetadds|بازنشانی شمارنده دعوت","تنظیم کانال @channel|fsub @channel|تنظیم کانال عضویت اجباری","حذف کانال|fsubdel|حذف کانال عضویت اجباری","گزارش|report|گزارش پیام ریپلای‌شده به مدیرها","لینک|link|منوی ساخت و دریافت لینک دعوت"],
+"آمار و نقش‌ها":["آمار|stats|آمار گروه","آمار امروز|today|آمار امروز","فعال ترین اعضا|top|نمایش اعضای فعال","رتبه من|rank|رتبه خودت","مقام من|myrole|نمایش نقش خودت","اطلاعات|whois|اطلاعات عضو؛ معمولاً با ریپلای","شناسه|id|نمایش شناسه","ادمین ها|admins|نمایش مدیرها","وضعیت|status|وضعیت گروه","پینگ|ping|بررسی پاسخ‌گویی ربات","زبان|/lang|انتخاب زبان گروه توسط مدیر","جانشین مالک|coowner|تعیین جانشین مالک","عزل مالک|uncoowner|برداشتن نقش جانشین مالک","ناظر|mod|افزودن ناظر","حذف ناظر|unmod|حذف ناظر","ویژه|vip|افزودن عضو ویژه","حذف ویژه|unvip|حذف عضو ویژه","سفید|white|افزودن به فهرست سفید","حذف سفید|unwhite|حذف از فهرست سفید","لیست ناظران|modlist|نمایش ناظرها","لیست ویژه|viplist|نمایش اعضای ویژه","لیست سفید|whitelist|نمایش فهرست سفید"],
+"ابزارها و Premium":["پاکسازی ربات ها|cleanbots|پاک‌سازی ربات‌های شناسایی‌شده","پاکسازی دیلیتی ها|cleandeleted|پاک‌سازی حساب‌های حذف‌شده شناسایی‌شده","لیست سکوت|mutelist|فهرست ساکت‌شده‌ها","لیست بن|banlist|فهرست بن‌شده‌ها","ریلود|reload|همگام‌سازی فهرست مدیرها","بازنشانی تنظیمات|reset|بازنشانی تنظیمات؛ فقط مالک مجاز","تیکت مشکل من|ticket my problem|ثبت تیکت پشتیبانی","لیست تیکت|tickets|نمایش تیکت‌ها برای کاربر مجاز","پاسخ تیکت 1 متن|ticketreply 1 text|پاسخ به تیکت مشخص","بستن تیکت 1|closeticket 1|بستن تیکت مشخص","پشتیبان|backup|درخواست نسخهٔ پشتیبان","بازیابی|restore|بازیابی با ریپلای روی فایل پشتیبان","تنظیم رسانه موقت 30|tempmedia 30|تنظیم رسانه موقت در صورت فعال‌بودن Premium"],
+"سرگرمی":["جوک|joke|دریافت جوک","فال|fal|گرفتن فال","دانستنی|fact|یه دانستنی","چالش|challenge|پیشنهاد چالش","تاس|dice|انداختن تاس","سکه|coin|شیر یا خط","بازی|game|شروع بازی ساده","سرگرمی خاموش|fun off|غیرفعال‌کردن سرگرمی"]
+};
+const tabs=document.getElementById('tabs'),rows=document.getElementById('rows'),q=document.getElementById('q'),toast=document.getElementById('toast');
+let cur=Object.keys(D)[0],tt;
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function draw(){
+const t=q.value.trim().toLowerCase();
+let list=t?Object.values(D).flat():D[cur];
+if(t)list=list.filter(r=>r.toLowerCase().includes(t));
+rows.innerHTML=list.length?list.map((r,i)=>{const p=r.split('|');return '<button class="row" style="animation-delay:'+Math.min(i*25,300)+'ms" data-c="'+esc(p[0])+'"><span class="k">'+esc(p[0])+'</span><span class="e">'+esc(p[1])+'</span><span class="d">'+esc(p[2])+'</span></button>'}).join(''):'<div class="none">دستوری با این عبارت پیدا نشد.</div>';
+tabs.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on',!t&&b.dataset.k===cur));
+}
+Object.keys(D).forEach(k=>{const b=document.createElement('button');b.className='tab';b.dataset.k=k;b.textContent=k;b.setAttribute('role','tab');b.onclick=()=>{cur=k;q.value='';draw()};tabs.appendChild(b)});
+q.oninput=draw;
+rows.onclick=e=>{
+const b=e.target.closest('.row');if(!b)return;
+const ok=()=>{toast.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('on'),1400)};
+if(navigator.clipboard)navigator.clipboard.writeText(b.dataset.c).then(ok,()=>{});else ok();
+};
+draw();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const art=document.getElementById('art'),big=document.getElementById('big');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+art.addEventListener('pointermove',e=>{const r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;big.style.transform='rotate('+(x*10)+'deg) translate('+(x*10)+'px,'+(y*10)+'px)'});
+art.addEventListener('pointerleave',()=>{big.style.transform=''});
+}
+</script>
+</body>
+</html>
